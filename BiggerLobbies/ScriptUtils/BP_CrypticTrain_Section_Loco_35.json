@@ -1,0 +1,1170 @@
+{
+  "$type": "UAssetAPI.UAsset, UAssetAPI",
+  "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
+  "NameMap": [
+    "/Game/Enemies/Assets/Cryptic/CrypticBuffalo/MI_Cryptic_Buffalo_Ghost",
+    "/Game/Enemies/Assets/Cryptic/CrypticTrain/BP_CrypticTrain_Section",
+    "/Game/Enemies/Assets/Cryptic/CrypticTrain/Sound/SC_Enemy_Cryptic_Train_Loop",
+    "/Game/Meshes/Cryptics/SKM_Skull_Cryptic_Buffalo",
+    "/Game/Meshes/Cryptics/SM_Cryptic_Locomotive",
+    "Asset",
+    "Audio",
+    "bAutoActivate",
+    "bCanEverAffectNavigation",
+    "bCastDynamicShadow",
+    "bGenerateOverlapEvents",
+    "BlueprintType",
+    "BodyInstance",
+    "bReceivesDecals",
+    "CollisionProfileName",
+    "CollisionResponses",
+    "ComponentTags",
+    "critical",
+    "DefaultSceneRoot",
+    "Engine",
+    "Niagara2",
+    "None",
+    "NS_Cryptic_FloatingWood_Train",
+    "NS_Cryptic_Projectile_B",
+    "ObjectType",
+    "OverrideMaterials",
+    "OverrideParameters",
+    "ParameterData",
+    "Pitch",
+    "RelativeLocation",
+    "RelativeRotation",
+    "RelativeScale3D",
+    "ResponseArray",
+    "Roll",
+    "SortedParameterOffsets",
+    "Sound",
+    "StaticMesh",
+    "TurretLoc",
+    "UserParameterRedirects",
+    "WeakSpot",
+    "X",
+    "Y",
+    "Yaw",
+    "Z",
+    "Audio_GEN_VARIABLE",
+    "BP_CrypticTrain_Section_Loco_C",
+    "Default__BP_CrypticTrain_Section_Loco_C",
+    "InheritableComponentHandler",
+    "Niagara2_GEN_VARIABLE",
+    "NS_Cryptic_FloatingWood_Train_GEN_VARIABLE",
+    "NS_Cryptic_Projectile_B_GEN_VARIABLE",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "TurretLoc_GEN_VARIABLE",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "StaticMesh_GEN_VARIABLE",
+    "WeakSpot_GEN_VARIABLE",
+    "/Game/Enemies/Assets/Cryptic/CrypticTrain/BP_CrypticTrain_Section_Loco",
+    "/Script/CoreUObject",
+    "Package",
+    "/Script/Engine",
+    "BlueprintGeneratedClass",
+    "BP_CrypticTrain_Section_C",
+    "AudioComponent",
+    "Default__BlueprintGeneratedClass",
+    "BoxComponent",
+    "BoxEnemyCapsuelDetection_GEN_VARIABLE",
+    "Default__BP_CrypticTrain_Section_C",
+    "Class",
+    "Object",
+    "SceneComponent",
+    "StaticMeshComponent",
+    "/Script/Niagara",
+    "NiagaraComponent",
+    "Default__InheritableComponentHandler",
+    "MaterialBillboardComponent",
+    "MaterialBillboard_GEN_VARIABLE",
+    "MaterialInstanceConstant",
+    "MI_Cryptic_Buffalo_Ghost",
+    "Default__SceneComponent",
+    "Rotator",
+    "Vector",
+    "CollisionResponse",
+    "NiagaraUserRedirectionParameterStore",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "SoundCue",
+    "SC_Enemy_Cryptic_Train_Loop",
+    "SKM_Skull_Cryptic_Buffalo",
+    "SM_Cryptic_Locomotive",
+    "/Script/UMG",
+    "WidgetComponent",
+    "LifeBarWidget_GEN_VARIABLE"
+  ],
+  "CustomSerializationFlags": "None",
+  "UseSeparateBulkDataFiles": true,
+  "IsUnversioned": true,
+  "FileVersionLicenseeUE": 0,
+  "ObjectVersion": "VER_UE4_CORRECT_LICENSEE_FLAG",
+  "ObjectVersionUE5": "OS_SUB_OBJECT_SHADOW_SERIALIZATION",
+  "CustomVersionContainer": [
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{375EC13C-06E4-48FB-B500-84F0262A717E}",
+      "FriendlyName": "FCoreObjectVersion",
+      "Version": 4,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E4B068ED-F494-42E9-A231-DA0B2E46BB41}",
+      "FriendlyName": "FEditorObjectVersion",
+      "Version": 40,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{CFFC743F-43B0-4480-9391-14DF171D2073}",
+      "FriendlyName": "FFrameworkObjectVersion",
+      "Version": 37,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{7B5AE74C-D270-4C10-A958-57980B212A5A}",
+      "FriendlyName": "FSequencerObjectVersion",
+      "Version": 13,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{29E575DD-E0A3-4627-9D10-D276232CDCEA}",
+      "FriendlyName": "FAnimPhysObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{601D1886-AC64-4F84-AA16-D3DE0DEAC7D6}",
+      "FriendlyName": "FFortniteMainBranchObjectVersion",
+      "Version": 207,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC}",
+      "FriendlyName": "FNiagaraObjectVersion",
+      "Version": 1,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{717F9EE7-E9B0-493A-88B3-91321B388107}",
+      "FriendlyName": "FAssetRegistryVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{9C54D522-A826-4FBE-9421-074661B482D0}",
+      "FriendlyName": "FReleaseObjectVersion",
+      "Version": 44,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E7086368-6B23-4C58-8439-1B7016265E91}",
+      "FriendlyName": "FFortniteReleaseBranchCustomObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{D89B5E42-24BD-4D46-8412-ACA8DF641779}",
+      "FriendlyName": "FUE5ReleaseStreamObjectVersion",
+      "Version": 56,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{FCF57AFA-5076-4283-B9A9-E658FFA02D32}",
+      "FriendlyName": "FNiagaraCustomVersion",
+      "Version": 92,
+      "IsSerialized": false
+    }
+  ],
+  "SoftObjectPathList": [],
+  "GatherableTextData": null,
+  "Exports": [
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAPZ////AAAAAAAAAAA=",
+      "ObjectName": "Audio_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -7,
+      "SuperIndex": 0,
+      "TemplateIndex": -1,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 14,
+      "SerialOffset": 6106,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [
+        -39
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -1,
+        -7
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AQIGBQELAAAABAAAAAAAAAD+////AAAAAAAAAAAAAAAAAAAAAAAAAAAEAIQA+v///xMAAAAAAAAAAAAAAAAAAAAAAAAAFQAAAAAAAAABAAAAAwAAAAEAAAALAAAAAAAAAA4AAABCUFRZUEVfTm9ybWFsAA==",
+      "ObjectName": "BP_CrypticTrain_Section_Loco_C",
+      "OuterIndex": 0,
+      "ClassIndex": -8,
+      "SuperIndex": -2,
+      "TemplateIndex": -3,
+      "ObjectFlags": "RF_Public, RF_Transactional",
+      "SerialSize": 115,
+      "SerialOffset": 6120,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        -2,
+        -5,
+        4,
+        11
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -8,
+        -3
+      ],
+      "CreateBeforeCreateDependencies": [
+        -2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "FAInAwEBAAAAAA==",
+      "ObjectName": "Default__BP_CrypticTrain_Section_Loco_C",
+      "OuterIndex": 0,
+      "ClassIndex": 2,
+      "SuperIndex": 0,
+      "TemplateIndex": -5,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ClassDefaultObject, RF_ArchetypeObject",
+      "SerialSize": 10,
+      "SerialOffset": 6235,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        -29,
+        12,
+        7,
+        9,
+        1,
+        6,
+        -44,
+        13,
+        -16,
+        5,
+        -4
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        2,
+        -5
+      ],
+      "CreateBeforeCreateDependencies": [],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAMHAAAAAAnz////DAAAAAAH/v///yQAAAAAAAAAchQSNhFX50WP0Sw8eeFA7QAFCwAAAIAHAiQAAAAAAAAA8////4AHAgoAAAAAAAAA8////4AHAg0AAAAAAAAA8////4AHAgkAAAAAAAAA8////4AHAgwAAAAAAAAA8////4AHAhgAAAAAAAAA3v///4AHAg4AAAAAAAAA3v///4AHAg8AAAAAAAAA3v///4AHAiAAAAAAAAAA3f///4AHA93///+ABwIIAAAAAAAAAPP///8BAAny////BwAAAAAH/v///xcAAAAAAAAA0QE3qyEsIUqVyOsYNPfyCwAFBwAAAIAHAgUAAAAAAAAA8v///4AHAhoAAAAAAAAA8v///4AHAiYAAAAAAAAA3P///4AHAiIAAAAAAAAA3P///4AHA9z///+ABwIbAAAAAAAAANz///+ABwPc////AQAJ8////w0AAAAAB/7///8nAAAAAAAAAELRP1tqP25DvIKNHsRzzjsABRsAAACABwIkAAAAAAAAAPP///+ABwIZAAAAAAAAAPP///+ABwPz////gAcCCgAAAAAAAADz////gAcCDQAAAAAAAADz////gAcCCQAAAAAAAADz////gAcCDAAAAAAAAADz////gAcCGAAAAAAAAADe////gAcCDgAAAAAAAADe////gAcCDwAAAAAAAADe////gAcCIAAAAAAAAADd////gAcD3f///4AHAh0AAAAAAAAA8////4AHAigAAAAAAAAA3////4AHAikAAAAAAAAA3////4AHAisAAAAAAAAA3////4AHAh4AAAAAAAAA8////4AHAhwAAAAAAAAA4P///4AHAioAAAAAAAAA4P///4AHAiEAAAAAAAAA4P///4AHAh8AAAAAAAAA8////4AHAigAAAAAAAAA3////4AHAikAAAAAAAAA3////4AHAisAAAAAAAAA3////4AHAhAAAAAAAAAA8////4AHA/P///+ABwIIAAAAAAAAAPP///8BAAn2////CQAAAAAH/v///yUAAAAAAAAAWWzZ4REqU0yhgmvpR9oQ5gAFBAAAAIAHAh0AAAAAAAAA9v///4AHAigAAAAAAAAA3////4AHAikAAAAAAAAA3////4AHAisAAAAAAAAA3////wEACfL///8GAAAAAAf+////FgAAAAAAAADjQ9BSiJJCSo+jqarLKCZ5AAUJAAAAgAcCBQAAAAAAAADy////gAcCGgAAAAAAAADy////gAcCJgAAAAAAAADc////gAcCIgAAAAAAAADc////gAcD3P///4AHAhsAAAAAAAAA3P///4AHA9z///+ABwIdAAAAAAAAAPL///+ABwIrAAAAAAAAAN////8BAAn5////AQAAAAAH/v///wYAAAAAAAAAooCy17ECg0eJTKNbDpz4QwAFBAAAAIAHAiMAAAAAAAAA+f///4AHAh0AAAAAAAAA+f///4AHAigAAAAAAAAA3////4AHAisAAAAAAAAA3////wEACfL///8FAAAAAAf+////FAAAAAAAAABFrV+vwAiRSrrcMi8Y0N7nAAUIAAAAgAcCBQAAAAAAAADy////gAcCGgAAAAAAAADy////gAcCJgAAAAAAAADc////gAcCIgAAAAAAAADc////gAcD3P///4AHAhsAAAAAAAAA3P///4AHA9z///+ABwIHAAAAAAAAAPL///8BAAAAAA==",
+      "ObjectName": "InheritableComponentHandler",
+      "OuterIndex": 2,
+      "ClassIndex": -9,
+      "SuperIndex": 0,
+      "TemplateIndex": -15,
+      "ObjectFlags": "RF_NoFlags",
+      "SerialSize": 1309,
+      "SerialOffset": 6245,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        12,
+        -2,
+        7,
+        13,
+        9,
+        6,
+        1,
+        5
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -9,
+        -15
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AwMHAQAAAAAAAAAA",
+      "ObjectName": "Niagara2_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -14,
+      "SuperIndex": 0,
+      "TemplateIndex": -18,
+      "ObjectFlags": "RF_Public, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 12,
+      "SerialOffset": 7554,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -18,
+        -14
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AwMHAQAAAAAAAAAA",
+      "ObjectName": "NS_Cryptic_FloatingWood_Train_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -14,
+      "SuperIndex": 0,
+      "TemplateIndex": -19,
+      "ObjectFlags": "RF_Public, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 12,
+      "SerialOffset": 7566,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -19,
+        -14
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AwMHAQAAAAAAAAAA",
+      "ObjectName": "NS_Cryptic_Projectile_B_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -14,
+      "SuperIndex": 0,
+      "TemplateIndex": -20,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 12,
+      "SerialOffset": 7578,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -20,
+        -14
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "LAEAAAAAAAAAAA==",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -10,
+      "SuperIndex": 0,
+      "TemplateIndex": -31,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject",
+      "SerialSize": 10,
+      "SerialOffset": 7590,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -10,
+        -31
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BQPLNEHpw854QAAAAAAAAGA9K384SNVwfkAAAAAAAAAAAA==",
+      "ObjectName": "TurretLoc_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -10,
+      "SuperIndex": 0,
+      "TemplateIndex": -30,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 34,
+      "SerialOffset": 7600,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -30,
+        -10
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAQHBfb///8IAAAAaWIMEy1gjUKK3l0jKLT/mhIAAAAAAAAAAAAAAA==",
+      "ObjectName": "SCS_Node_0",
+      "OuterIndex": 11,
+      "ClassIndex": -11,
+      "SuperIndex": 0,
+      "TemplateIndex": -37,
+      "ObjectFlags": "RF_Transactional",
+      "SerialSize": 40,
+      "SerialOffset": 7634,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        8
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -11,
+        -37
+      ],
+      "CreateBeforeCreateDependencies": [
+        11
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AgMKAAAAAAAAAA==",
+      "ObjectName": "SimpleConstructionScript_0",
+      "OuterIndex": 2,
+      "ClassIndex": -12,
+      "SuperIndex": 0,
+      "TemplateIndex": -38,
+      "ObjectFlags": "RF_Transactional",
+      "SerialSize": 10,
+      "SerialOffset": 7674,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        10
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -12,
+        -38
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BAPX////AAAAAAAAAAAAAAAAAQAAAAAAAAA=",
+      "ObjectName": "StaticMesh_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -13,
+      "SuperIndex": 0,
+      "TemplateIndex": -42,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 26,
+      "SerialOffset": 7684,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [
+        -41
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -42,
+        -13
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BAImAiwCSgYWA9j///8BAAAA7////wBlj6FhaD2DQLQjM75NSuA+7Yv8pPccOEAAAACp7wUjPYhpE/3/f1bAdpdm/f//M0AAAAC81GkDQAAAALzUaQNAAAAAvNRpA0ABAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+      "ObjectName": "WeakSpot_GEN_VARIABLE",
+      "OuterIndex": 2,
+      "ClassIndex": -13,
+      "SuperIndex": 0,
+      "TemplateIndex": -43,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 127,
+      "SerialOffset": 7710,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        2
+      ],
+      "CreateBeforeSerializationDependencies": [
+        -40,
+        -17
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -43,
+        -13
+      ],
+      "CreateBeforeCreateDependencies": [
+        2
+      ],
+      "Extras": ""
+    }
+  ],
+  "SearchableNames": null,
+  "ImportTypeHierarchies": null,
+  "MetaData": null,
+  "Thumbnails": null,
+  "WorldTileInfo": null,
+  "AppendedNullBytes": 53,
+  "OtherAssetsFailedToAccess": [],
+  "LegacyFileVersion": -9,
+  "DataResourceVersion": "Invalid",
+  "DataResources": null,
+  "UsesEventDrivenLoader": true,
+  "WillSerializeNameHashes": true,
+  "Imports": [
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Audio_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "AudioComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_CrypticTrain_Section_C",
+      "OuterIndex": -21,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BlueprintGeneratedClass",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BoxEnemyCapsuelDetection_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BoxComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BP_CrypticTrain_Section_C",
+      "OuterIndex": -21,
+      "ClassPackage": "/Game/Enemies/Assets/Cryptic/CrypticTrain/BP_CrypticTrain_Section",
+      "ClassName": "BP_CrypticTrain_Section_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Object",
+      "OuterIndex": -26,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "AudioComponent",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BlueprintGeneratedClass",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "InheritableComponentHandler",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SceneComponent",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SCS_Node",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SimpleConstructionScript",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "StaticMeshComponent",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NiagaraComponent",
+      "OuterIndex": -28,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__InheritableComponentHandler",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "InheritableComponentHandler",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "MaterialBillboard_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "MaterialBillboardComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "MI_Cryptic_Buffalo_Ghost",
+      "OuterIndex": -22,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "MaterialInstanceConstant",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Niagara2_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Niagara",
+      "ClassName": "NiagaraComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NS_Cryptic_FloatingWood_Train_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Niagara",
+      "ClassName": "NiagaraComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NS_Cryptic_Projectile_B_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Niagara",
+      "ClassName": "NiagaraComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Enemies/Assets/Cryptic/CrypticTrain/BP_CrypticTrain_Section",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Enemies/Assets/Cryptic/CrypticBuffalo/MI_Cryptic_Buffalo_Ghost",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Enemies/Assets/Cryptic/CrypticTrain/Sound/SC_Enemy_Cryptic_Train_Loop",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Meshes/Cryptics/SKM_Skull_Cryptic_Buffalo",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Meshes/Cryptics/SM_Cryptic_Locomotive",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/CoreUObject",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Engine",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Niagara",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "TurretLoc_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SceneComponent",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Rotator",
+      "OuterIndex": -26,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Vector",
+      "OuterIndex": -26,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BodyInstance",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CollisionResponse",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NiagaraUserRedirectionParameterStore",
+      "OuterIndex": -28,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SCS_Node",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SCS_Node",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SimpleConstructionScript",
+      "OuterIndex": -27,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SimpleConstructionScript",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SC_Enemy_Cryptic_Train_Loop",
+      "OuterIndex": -23,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SoundCue",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SKM_Skull_Cryptic_Buffalo",
+      "OuterIndex": -24,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StaticMesh",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SM_Cryptic_Locomotive",
+      "OuterIndex": -25,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StaticMesh",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "StaticMesh_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StaticMeshComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "WeakSpot_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StaticMeshComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "LifeBarWidget_GEN_VARIABLE",
+      "OuterIndex": -2,
+      "ClassPackage": "/Script/UMG",
+      "ClassName": "WidgetComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    }
+  ],
+  "DependsMap": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "SoftPackageReferenceList": null,
+  "AssetRegistryDependencyDataOffset": -1,
+  "AssetRegistryRecords": [],
+  "ImportBits": null,
+  "SoftPackageBits": null,
+  "ExtraPackageDependencies": null,
+  "BulkData": null,
+  "AdditionalFiles": "",
+  "Trailer": null,
+  "ValorantGarbageData": null,
+  "SeaOfThievesGarbageData": null,
+  "Generations": [
+    {
+      "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
+      "ExportCount": 13,
+      "NameCount": 93
+    }
+  ],
+  "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "PersistentGuid": "{00000000-0000-0000-0000-000000000000}",
+  "RecordedEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "RecordedCompatibleWithEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "ChunkIDs": [],
+  "PackageSource": 0,
+  "FolderName": "/Game/Enemies/Assets/Cryptic/CrypticTrain/BP_CrypticTrain_Section_Loco",
+  "LocalizationId": null,
+  "SoftObjectPathsCount": 0,
+  "SoftObjectPathsOffset": 3041,
+  "SearchableNamesOffset": 0,
+  "ThumbnailTableOffset": 0,
+  "ImportTypeHierarchiesCount": 0,
+  "ImportTypeHierarchiesOffset": 0,
+  "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "CompressionFlags": 0,
+  "AdditionalPackagesToCook": [],
+  "NamesReferencedFromExportDataCount": 58,
+  "PayloadTocOffset": -1,
+  "DataResourceOffset": -1,
+  "doWeHaveAssetRegistryData": true,
+  "doWeHaveWorldTileInfo": false,
+  "PackageFlags": 2148016640,
+  "HasUnversionedProperties": true,
+  "IsFilterEditorOnly": true,
+  "IsPreDependencyFormat": true
+}

@@ -1,0 +1,1472 @@
+{
+  "$type": "UAssetAPI.UAsset, UAssetAPI",
+  "Info": "Serialized with UAssetAPI 1.1.0 (8b8687a)",
+  "NameMap": [
+    "/Game/Items/Assets/Card/ABP_Hands_Spell_Shield",
+    "/Game/Items/BP_Item",
+    "/Game/LocaStringTables/ST_Spells",
+    "/Game/LocaStringTables/ST_Spells.ST_Spells",
+    "/Game/Spells/Assets/Shared/BP_Item_SpellCast",
+    "AnimClass",
+    "ArrayProperty",
+    "bCastDynamicShadow",
+    "BlueprintType",
+    "BodyInstance",
+    "BoolProperty",
+    "ByteProperty",
+    "CallFunc_Add_IntInt_ReturnValue",
+    "CallFunc_Array_Get_Item",
+    "CallFunc_Array_Length_ReturnValue",
+    "CallFunc_GetHorizontalDistanceTo_ReturnValue",
+    "CallFunc_IsLocallyControlled_ReturnValue",
+    "CallFunc_K2_GetActorLocation_ReturnValue",
+    "CallFunc_Less_IntInt_ReturnValue",
+    "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+    "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+    "CallFunc_SpawnSystemAtLocation_ReturnValue",
+    "CallFunc_SphereOverlapActors_OutActors",
+    "CallFunc_SphereOverlapActors_ReturnValue",
+    "CallFunc_Subtract_VectorVector_ReturnValue",
+    "CollisionProfileName",
+    "CollisionResponses",
+    "DefaultSceneRoot",
+    "DoubleProperty",
+    "Engine",
+    "EntryPoint",
+    "ExecuteUbergraph_BP_Item_SpellCast_Acid_Contagion",
+    "F_AddBuff",
+    "F_AddSpellXp",
+    "F_SpellCast_Local",
+    "F_SpellCast_Server",
+    "FirstPersonPrimitiveType",
+    "FloatProperty",
+    "Hands",
+    "IntProperty",
+    "IsLocallyControlled",
+    "itemAcid",
+    "K2Node_MakeArray_Array",
+    "newSpawnLoc",
+    "None",
+    "NS_SpellCast",
+    "ObjectProperty",
+    "owningPlayer",
+    "puddlesFound",
+    "RelativeLocation",
+    "RelativeRotation",
+    "ResponseArray",
+    "SkeletalMesh",
+    "SkinnedAsset",
+    "ST_Spells",
+    "StructProperty",
+    "Temp_int_Array_Index_Variable",
+    "Temp_int_Loop_Counter_Variable",
+    "Temp_object_Variable",
+    "traceLoc",
+    "traveler",
+    "UberGraphFrame",
+    "X",
+    "Yaw",
+    "Z",
+    "BP_Item_SpellCast_Acid_Contagion_C",
+    "Default__BP_Item_SpellCast_Acid_Contagion_C",
+    "InheritableComponentHandler",
+    "NS_SpellCast_GEN_VARIABLE",
+    "DefaultSceneRoot_GEN_VARIABLE",
+    "SCS_Node",
+    "SimpleConstructionScript",
+    "Hands_GEN_VARIABLE",
+    "/Game/Spells/BP_Item_SpellCast_Acid_Contagion",
+    "/Script/CoreUObject",
+    "Package",
+    "ABP_Hands_Spell_Shield_C",
+    "Default__ABP_Hands_Spell_Shield_C",
+    "/Script/Engine",
+    "AnimBlueprintGeneratedClass",
+    "/Game/Gamework/BPFL_FunctionLibrary",
+    "BlueprintGeneratedClass",
+    "BPFL_FunctionLibrary_C",
+    "BP_Item_C",
+    "BP_Item_SpellCast_C",
+    "/Game/Spells/Buffs/UO_Buff_Acid",
+    "UO_Buff_Acid_C",
+    "/Game/Spells/Buffs/UO_Buff_Acid_Contagion",
+    "UO_Buff_Acid_Contagion_C",
+    "/Game/Spells/Puddles/BP_DamageArea",
+    "BP_DamageArea_C",
+    "Default__BlueprintGeneratedClass",
+    "Default__BP_DamageArea_C",
+    "Default__BP_Item_SpellCast_C",
+    "Default__BPFL_FunctionLibrary_C",
+    "Class",
+    "Function",
+    "Object",
+    "Actor",
+    "KismetArrayLibrary",
+    "KismetMathLibrary",
+    "KismetSystemLibrary",
+    "SceneComponent",
+    "SkeletalMeshComponent",
+    "/Script/Niagara",
+    "NiagaraComponent",
+    "NiagaraFunctionLibrary",
+    "EObjectTypeQuery",
+    "Default__Function",
+    "GetHorizontalDistanceTo",
+    "K2_GetActorLocation",
+    "Array_Get",
+    "Array_Length",
+    "Add_IntInt",
+    "Less_IntInt",
+    "LessEqual_DoubleDouble",
+    "Subtract_VectorVector",
+    "SphereOverlapActors",
+    "SpawnSystemAtLocation",
+    "Default__InheritableComponentHandler",
+    "Default__KismetArrayLibrary",
+    "/Game/FX/VFX_Spells/Element_Acid/NS_Acid_Contagion",
+    "NiagaraSystem",
+    "NS_Acid_Contagion",
+    "Holder_GEN_VARIABLE",
+    "Socket_TpsOffset_GEN_VARIABLE",
+    "Default__SceneComponent",
+    "Rotator",
+    "Vector",
+    "CollisionResponse",
+    "PointerToUberGraphFrame",
+    "Default__SCS_Node",
+    "Default__SimpleConstructionScript",
+    "/Game/Spells/Assets/Acid/S_Spell_Acid_Contagion",
+    "SoundWave",
+    "S_Spell_Acid_Contagion",
+    "SphereComponent",
+    "Sphere_GEN_VARIABLE",
+    "StaticMeshComponent",
+    "SM_Card_GEN_VARIABLE",
+    "StringTable",
+    "/Game/Textures/Icons/Icon_Contagion",
+    "Texture2D",
+    "Icon_Contagion",
+    "Default__UO_Buff_Acid_C",
+    "Default__UO_Buff_Acid_Contagion_C"
+  ],
+  "CustomSerializationFlags": "None",
+  "UseSeparateBulkDataFiles": true,
+  "IsUnversioned": true,
+  "FileVersionLicenseeUE": 0,
+  "ObjectVersion": "VER_UE4_CORRECT_LICENSEE_FLAG",
+  "ObjectVersionUE5": "OS_SUB_OBJECT_SHADOW_SERIALIZATION",
+  "CustomVersionContainer": [
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{375EC13C-06E4-48FB-B500-84F0262A717E}",
+      "FriendlyName": "FCoreObjectVersion",
+      "Version": 4,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E4B068ED-F494-42E9-A231-DA0B2E46BB41}",
+      "FriendlyName": "FEditorObjectVersion",
+      "Version": 40,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{CFFC743F-43B0-4480-9391-14DF171D2073}",
+      "FriendlyName": "FFrameworkObjectVersion",
+      "Version": 37,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{7B5AE74C-D270-4C10-A958-57980B212A5A}",
+      "FriendlyName": "FSequencerObjectVersion",
+      "Version": 13,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{29E575DD-E0A3-4627-9D10-D276232CDCEA}",
+      "FriendlyName": "FAnimPhysObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{601D1886-AC64-4F84-AA16-D3DE0DEAC7D6}",
+      "FriendlyName": "FFortniteMainBranchObjectVersion",
+      "Version": 207,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC}",
+      "FriendlyName": "FNiagaraObjectVersion",
+      "Version": 1,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{717F9EE7-E9B0-493A-88B3-91321B388107}",
+      "FriendlyName": "FAssetRegistryVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{9C54D522-A826-4FBE-9421-074661B482D0}",
+      "FriendlyName": "FReleaseObjectVersion",
+      "Version": 44,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{E7086368-6B23-4C58-8439-1B7016265E91}",
+      "FriendlyName": "FFortniteReleaseBranchCustomObjectVersion",
+      "Version": 17,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{D89B5E42-24BD-4D46-8412-ACA8DF641779}",
+      "FriendlyName": "FUE5ReleaseStreamObjectVersion",
+      "Version": 56,
+      "IsSerialized": false
+    },
+    {
+      "$type": "UAssetAPI.CustomVersion, UAssetAPI",
+      "Name": null,
+      "Key": "{FCF57AFA-5076-4283-B9A9-E658FFA02D32}",
+      "FriendlyName": "FNiagaraCustomVersion",
+      "Version": 92,
+      "IsSerialized": false
+    }
+  ],
+  "SoftObjectPathList": [],
+  "GatherableTextData": null,
+  "Exports": [
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AQIGBwEKAAAABgAAAAMAAAAAAAAA+////wMAAAAFAAAABAAAAAMAAAAFAAAANwAAAAAAAAA9AAAAAAAAAAEAIAABAAAAEAAAAAAgIAAAAAAAAAAsAAAAAAAAAAC7////BgAAAAAAAAAwAAAAAAAAAAEAIAABAAAAEAAAAAUIAQAAAAAAAAAsAAAAAAAAAAAuAAAAAAAAADAAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAACwAAAAAAAAAAPj///8nAAAAAAAAADwAAAAAAAAAAQAgAAEAAAAEAAAABQABAAAAAAAAACwAAAAAAAAAADcAAAAAAAAAKwAAAAAAAAABACAAAQAAABgAAAAFAAEAAAAAAAAALAAAAAAAAAAAvv///zcAAAAAAAAAOwAAAAAAAAABACAAAQAAABgAAAAFAAEAAAAAAAAALAAAAAAAAAAAvv///wAAAAAAAAAAAwAAAB8AAAAAAAAAAwAAACIAAAAAAAAABAAAACMAAAAAAAAABQAAAAQAhADy////HQAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAEAAAACAAAAAQAAAAgAAAAAAAAADgAAAEJQVFlQRV9Ob3JtYWwA",
+      "ObjectName": "BP_Item_SpellCast_Acid_Contagion_C",
+      "OuterIndex": 0,
+      "ClassIndex": -16,
+      "SuperIndex": -5,
+      "TemplateIndex": -9,
+      "ObjectFlags": "RF_Public, RF_Transactional",
+      "SerialSize": 465,
+      "SerialOffset": 8733,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        -5,
+        -11,
+        3,
+        6,
+        10
+      ],
+      "CreateBeforeSerializationDependencies": [
+        5,
+        4,
+        -8
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -16,
+        -9
+      ],
+      "CreateBeforeCreateDependencies": [
+        -5
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAKCBAgCAQIMAgcKBgICAsgDBwABt////wEpAAAAAAAAAAAAAAAAgFFAAAAAAAsDAAAAAAAAACQAAABTVF9TcGVsbF9BY2lkX0NvbnRhZ2lvbl9EZXNjcmlwdGlvbgAAAAAACwMAAAAAAAAAHQAAAFNUX1NwZWxsX0FjaWRfQ29udGFnaW9uX05hbWUAs////wcBAAAACAAAAAA=",
+      "ObjectName": "Default__BP_Item_SpellCast_Acid_Contagion_C",
+      "OuterIndex": 0,
+      "ClassIndex": 1,
+      "SuperIndex": 0,
+      "TemplateIndex": -11,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ClassDefaultObject, RF_ArchetypeObject",
+      "SerialSize": 155,
+      "SerialOffset": 9198,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        7,
+        -75,
+        -59,
+        11,
+        -61,
+        -60
+      ],
+      "CreateBeforeSerializationDependencies": [
+        -73,
+        -76,
+        -77
+      ],
+      "SerializationBeforeCreateDependencies": [
+        1,
+        -11
+      ],
+      "CreateBeforeCreateDependencies": [],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BAEAAAAAAAAAAAAAAAATAAAAJwAAAAAAAAAeAAAAAAAAAAEAAAABAAAABAAAAJQAAAAAAAAAAAAsAAAAAAAAAAAGAAAAAAAAACoAAAAAAAAAAQAAAAEAAAAQAAAAAgAACAAAAAAAACwAAAAAAAAAAAsAAAAAAAAAKgAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAALAAAAAAAAAAA5f///zcAAAAAAAAAEQAAAAAAAAABAAAAAQAAABgAAAAAAAAAAAAAAAAALAAAAAAAAAAAvv///ycAAAAAAAAAOQAAAAAAAAABAAAAAQAAAAQAAAAAAAAAAAAAAAAALAAAAAAAAAAANwAAAAAAAAAYAAAAAAAAAAEAAAABAAAAGAAAAAAAAAAAAAAAAAAsAAAAAAAAAAC+////JwAAAAAAAAAMAAAAAAAAAAEAAAABAAAABAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAuAAAAAAAAABUAAAAAAAAAAQAAAAEAAAAIAAAAAAAIAAAAAAAAACwAAAAAAAAAAOf///8KAAAAAAAAABAAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAACwAAAAAAAAAAAEAAf8BAQYAAAAAAAAAOgAAAAAAAAABAAAAAQAAABAAAAACAAAIAAAAAAAALAAAAAAAAAAALgAAAAAAAAA6AAAAAAAAAAEAAAABAAAACAAAAAAAAAAAAAAAAAAsAAAAAAAAAADx////JwAAAAAAAAA4AAAAAAAAAAEAAAABAAAABAAAAAAAAAAAAAAAAAAsAAAAAAAAAAA3AAAAAAAAABEAAAACAAAAAQAAAAEAAAAYAAAAAAAAAAAAAAAAACwAAAAAAAAAAL7///8GAAAAAAAAABYAAAAAAAAAAQAAAAEAAAAQAAAAAAAACAAAAAAAACwAAAAAAAAAAC4AAAAAAAAAFgAAAAAAAAABAAAAAQAAAAgAAAAAAAAAAAAAAAAALAAAAAAAAAAA8f///woAAAAAAAAAFwAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAAAAAAAALAAAAAAAAAAAAQAB/wEBJwAAAAAAAAAOAAAAAAAAAAEAAAABAAAABAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAuAAAAAAAAAA0AAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAACwAAAAA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",
+      "ObjectName": "ExecuteUbergraph_BP_Item_SpellCast_Acid_Contagion",
+      "OuterIndex": 1,
+      "ClassIndex": -13,
+      "SuperIndex": 0,
+      "TemplateIndex": -30,
+      "ObjectFlags": "RF_Public",
+      "SerialSize": 2649,
+      "SerialOffset": 9353,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        3,
+        -44,
+        -4,
+        -12,
+        -7,
+        -6
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -13,
+        -30
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BAEAAAAA5P///wAAAAAAAAAAEgAAAA4AAABGAwAAAB0RBAAAFgQLUwAAAAwAAAAAAAAAAA==",
+      "ObjectName": "F_SpellCast_Local",
+      "OuterIndex": 1,
+      "ClassIndex": -13,
+      "SuperIndex": -28,
+      "TemplateIndex": -30,
+      "ObjectFlags": "RF_Public",
+      "SerialSize": 52,
+      "SerialOffset": 12002,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        -28
+      ],
+      "CreateBeforeSerializationDependencies": [
+        3
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -13,
+        -30
+      ],
+      "CreateBeforeCreateDependencies": [
+        1,
+        -28
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "BAEAAAAA4////wAAAAAAAAAAEgAAAA4AAABGAwAAAB37AwAAFgQLUwAAAAwAAAAAAAAAAA==",
+      "ObjectName": "F_SpellCast_Server",
+      "OuterIndex": 1,
+      "ClassIndex": -13,
+      "SuperIndex": -29,
+      "TemplateIndex": -30,
+      "ObjectFlags": "RF_Public",
+      "SerialSize": 52,
+      "SerialOffset": 12054,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        -29
+      ],
+      "CreateBeforeSerializationDependencies": [
+        3
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -13,
+        -30
+      ],
+      "CreateBeforeCreateDependencies": [
+        1,
+        -29
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAMCAAAAAAnn////BwAAAAAH+////y0AAAAAAAAA+VjABSOvBk67RcMzUvwcIQAFAwAAAIAHAjEAAAAAAAAA5////4AHAj4AAAAAAAAAvv///4AHAkAAAAAAAAAAvv///wEACej///8LAAAAAAf8////JgAAAAAAAABp9c8f7EbCTIV5FxZntB32AAUMAAAAgAcCBQAAAAAAAADo////gAcCNAAAAAAAAADo////gAcCNQAAAAAAAADo////gAcCBwAAAAAAAADo////gAcCJAAAAAAAAADo////gAcCCQAAAAAAAADo////gAcCGQAAAAAAAAC9////gAcCGgAAAAAAAAC9////gAcCMwAAAAAAAAC8////gAcBAgAAALz///+ABwIyAAAAAAAAAOj///+ABwI/AAAAAAAAAL////8BAAAAAA==",
+      "ObjectName": "InheritableComponentHandler",
+      "OuterIndex": 1,
+      "ClassIndex": -17,
+      "SuperIndex": 0,
+      "TemplateIndex": -41,
+      "ObjectFlags": "RF_NoFlags",
+      "SerialSize": 325,
+      "SerialOffset": 12106,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        7,
+        -5,
+        11,
+        -4
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -17,
+        -41
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AwJ/ACYDBwEBAAAAAAAAAAA=",
+      "ObjectName": "NS_SpellCast_GEN_VARIABLE",
+      "OuterIndex": 1,
+      "ClassIndex": -25,
+      "SuperIndex": 0,
+      "TemplateIndex": -43,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 17,
+      "SerialOffset": 12431,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        1
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -43,
+        -25
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "LAEAAAAAAAAAAA==",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": 1,
+      "ClassIndex": -21,
+      "SuperIndex": 0,
+      "TemplateIndex": -64,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject",
+      "SerialSize": 10,
+      "SerialOffset": 12448,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        1
+      ],
+      "CreateBeforeSerializationDependencies": [],
+      "SerializationBeforeCreateDependencies": [
+        -21,
+        -64
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAQHBev///8IAAAAkuD+CiWRMkyVWB3LTWpUnhsAAAAAAAAAAAAAAA==",
+      "ObjectName": "SCS_Node_0",
+      "OuterIndex": 10,
+      "ClassIndex": -22,
+      "SuperIndex": 0,
+      "TemplateIndex": -70,
+      "ObjectFlags": "RF_Transactional",
+      "SerialSize": 40,
+      "SerialOffset": 12458,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        8
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -22,
+        -70
+      ],
+      "CreateBeforeCreateDependencies": [
+        10
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AgMJAAAAAAAAAA==",
+      "ObjectName": "SimpleConstructionScript_0",
+      "OuterIndex": 1,
+      "ClassIndex": -23,
+      "SuperIndex": 0,
+      "TemplateIndex": -71,
+      "ObjectFlags": "RF_Transactional",
+      "SerialSize": 10,
+      "SerialOffset": 12498,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [],
+      "CreateBeforeSerializationDependencies": [
+        9
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -23,
+        -71
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    },
+    {
+      "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
+      "Data": "AAP+////AAAAAAAAAAA=",
+      "ObjectName": "Hands_GEN_VARIABLE",
+      "OuterIndex": 1,
+      "ClassIndex": -24,
+      "SuperIndex": 0,
+      "TemplateIndex": -72,
+      "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
+      "SerialSize": 14,
+      "SerialOffset": 12508,
+      "ScriptSerializationStartOffset": 0,
+      "ScriptSerializationEndOffset": 0,
+      "bForcedExport": false,
+      "bNotForClient": false,
+      "bNotForServer": false,
+      "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+      "IsInheritedInstance": false,
+      "PackageFlags": "PKG_None",
+      "bNotAlwaysLoadedForEditorGame": false,
+      "bIsAsset": false,
+      "GeneratePublicHash": false,
+      "SerializationBeforeSerializationDependencies": [
+        1
+      ],
+      "CreateBeforeSerializationDependencies": [
+        -2
+      ],
+      "SerializationBeforeCreateDependencies": [
+        -72,
+        -24
+      ],
+      "CreateBeforeCreateDependencies": [
+        1
+      ],
+      "Extras": ""
+    }
+  ],
+  "SearchableNames": null,
+  "ImportTypeHierarchies": null,
+  "MetaData": null,
+  "Thumbnails": null,
+  "WorldTileInfo": null,
+  "AppendedNullBytes": 171,
+  "OtherAssetsFailedToAccess": [],
+  "LegacyFileVersion": -9,
+  "DataResourceVersion": "Invalid",
+  "DataResources": null,
+  "UsesEventDrivenLoader": true,
+  "WillSerializeNameHashes": true,
+  "Imports": [
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__ABP_Hands_Spell_Shield_C",
+      "OuterIndex": -45,
+      "ClassPackage": "/Game/Items/Assets/Card/ABP_Hands_Spell_Shield",
+      "ClassName": "ABP_Hands_Spell_Shield_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "ABP_Hands_Spell_Shield_C",
+      "OuterIndex": -45,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "AnimBlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BPFL_FunctionLibrary_C",
+      "OuterIndex": -46,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Item_C",
+      "OuterIndex": -47,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Item_SpellCast_C",
+      "OuterIndex": -48,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "UO_Buff_Acid_C",
+      "OuterIndex": -49,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "UO_Buff_Acid_Contagion_C",
+      "OuterIndex": -50,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_DamageArea_C",
+      "OuterIndex": -51,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BlueprintGeneratedClass",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BP_DamageArea_C",
+      "OuterIndex": -51,
+      "ClassPackage": "/Game/Spells/Puddles/BP_DamageArea",
+      "ClassName": "BP_DamageArea_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BP_Item_SpellCast_C",
+      "OuterIndex": -48,
+      "ClassPackage": "/Game/Spells/Assets/Shared/BP_Item_SpellCast",
+      "ClassName": "BP_Item_SpellCast_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__BPFL_FunctionLibrary_C",
+      "OuterIndex": -46,
+      "ClassPackage": "/Game/Gamework/BPFL_FunctionLibrary",
+      "ClassName": "BPFL_FunctionLibrary_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Function",
+      "OuterIndex": -56,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Object",
+      "OuterIndex": -56,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Actor",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BlueprintGeneratedClass",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "InheritableComponentHandler",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "KismetArrayLibrary",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "KismetMathLibrary",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "KismetSystemLibrary",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SceneComponent",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SCS_Node",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SimpleConstructionScript",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SkeletalMeshComponent",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NiagaraComponent",
+      "OuterIndex": -58,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NiagaraFunctionLibrary",
+      "OuterIndex": -58,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Class",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "EObjectTypeQuery",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "F_SpellCast_Local",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Function",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "F_SpellCast_Server",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Function",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__Function",
+      "OuterIndex": -56,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Function",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "GetHorizontalDistanceTo",
+      "OuterIndex": -15,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "K2_GetActorLocation",
+      "OuterIndex": -15,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Array_Get",
+      "OuterIndex": -18,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Array_Length",
+      "OuterIndex": -18,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Add_IntInt",
+      "OuterIndex": -19,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Less_IntInt",
+      "OuterIndex": -19,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "LessEqual_DoubleDouble",
+      "OuterIndex": -19,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Subtract_VectorVector",
+      "OuterIndex": -19,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SphereOverlapActors",
+      "OuterIndex": -20,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SpawnSystemAtLocation",
+      "OuterIndex": -26,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__InheritableComponentHandler",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "InheritableComponentHandler",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__KismetArrayLibrary",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "KismetArrayLibrary",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NS_SpellCast_GEN_VARIABLE",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/Niagara",
+      "ClassName": "NiagaraComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NS_Acid_Contagion",
+      "OuterIndex": -52,
+      "ClassPackage": "/Script/Niagara",
+      "ClassName": "NiagaraSystem",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Items/Assets/Card/ABP_Hands_Spell_Shield",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Gamework/BPFL_FunctionLibrary",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Items/BP_Item",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Spells/Assets/Shared/BP_Item_SpellCast",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Spells/Buffs/UO_Buff_Acid",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Spells/Buffs/UO_Buff_Acid_Contagion",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Spells/Puddles/BP_DamageArea",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/FX/VFX_Spells/Element_Acid/NS_Acid_Contagion",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Spells/Assets/Acid/S_Spell_Acid_Contagion",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/LocaStringTables/ST_Spells",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Game/Textures/Icons/Icon_Contagion",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/CoreUObject",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Engine",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "/Script/Niagara",
+      "OuterIndex": 0,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Package",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": -4,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Holder_GEN_VARIABLE",
+      "OuterIndex": -4,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Socket_TpsOffset_GEN_VARIABLE",
+      "OuterIndex": -4,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
+      "OuterIndex": -8,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SceneComponent",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SceneComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Rotator",
+      "OuterIndex": -56,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Vector",
+      "OuterIndex": -56,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BodyInstance",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CollisionResponse",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "PointerToUberGraphFrame",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/CoreUObject",
+      "ClassName": "Object",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SCS_Node",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SCS_Node",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__SimpleConstructionScript",
+      "OuterIndex": -57,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SimpleConstructionScript",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Hands_GEN_VARIABLE",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SkeletalMeshComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "S_Spell_Acid_Contagion",
+      "OuterIndex": -53,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SoundWave",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Sphere_GEN_VARIABLE",
+      "OuterIndex": -8,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SphereComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "SM_Card_GEN_VARIABLE",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StaticMeshComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "ST_Spells",
+      "OuterIndex": -54,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "StringTable",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Icon_Contagion",
+      "OuterIndex": -55,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "Texture2D",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__UO_Buff_Acid_C",
+      "OuterIndex": -49,
+      "ClassPackage": "/Game/Spells/Buffs/UO_Buff_Acid",
+      "ClassName": "UO_Buff_Acid_C",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "Default__UO_Buff_Acid_Contagion_C",
+      "OuterIndex": -50,
+      "ClassPackage": "/Game/Spells/Buffs/UO_Buff_Acid_Contagion",
+      "ClassName": "UO_Buff_Acid_Contagion_C",
+      "PackageName": null,
+      "bImportOptional": false
+    }
+  ],
+  "DependsMap": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "SoftPackageReferenceList": null,
+  "AssetRegistryDependencyDataOffset": -1,
+  "AssetRegistryRecords": [],
+  "ImportBits": null,
+  "SoftPackageBits": null,
+  "ExtraPackageDependencies": null,
+  "BulkData": null,
+  "AdditionalFiles": "",
+  "Trailer": null,
+  "ValorantGarbageData": null,
+  "SeaOfThievesGarbageData": null,
+  "Generations": [
+    {
+      "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
+      "ExportCount": 11,
+      "NameCount": 146
+    }
+  ],
+  "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
+  "PersistentGuid": "{00000000-0000-0000-0000-000000000000}",
+  "RecordedEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "RecordedCompatibleWithEngineVersion": {
+    "$type": "UAssetAPI.FEngineVersion, UAssetAPI",
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 0,
+    "Changelist": 0,
+    "Branch": null
+  },
+  "ChunkIDs": [],
+  "PackageSource": 0,
+  "FolderName": "/Game/Spells/BP_Item_SpellCast_Acid_Contagion",
+  "LocalizationId": null,
+  "SoftObjectPathsCount": 0,
+  "SoftObjectPathsOffset": 4646,
+  "SearchableNamesOffset": 0,
+  "ThumbnailTableOffset": 0,
+  "ImportTypeHierarchiesCount": 0,
+  "ImportTypeHierarchiesOffset": 0,
+  "SavedHash": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "CompressionFlags": 0,
+  "AdditionalPackagesToCook": [],
+  "NamesReferencedFromExportDataCount": 74,
+  "PayloadTocOffset": -1,
+  "DataResourceOffset": -1,
+  "doWeHaveAssetRegistryData": true,
+  "doWeHaveWorldTileInfo": false,
+  "PackageFlags": 2148016640,
+  "HasUnversionedProperties": true,
+  "IsFilterEditorOnly": true,
+  "IsPreDependencyFormat": true
+}

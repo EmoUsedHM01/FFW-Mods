@@ -1,0 +1,2 @@
+"C:/Users/joema/Documents/FFWModding/NoJokerCaps/ModStage/FarFarWest/Content/Progress/DT_PlayerJokers.uasset" "../../../FarFarWest/Content/Progress/DT_PlayerJokers.uasset"
+"C:/Users/joema/Documents/FFWModding/NoJokerCaps/ModStage/FarFarWest/Content/Progress/DT_PlayerJokers.uexp" "../../../FarFarWest/Content/Progress/DT_PlayerJokers.uexp"

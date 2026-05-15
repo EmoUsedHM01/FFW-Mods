@@ -1,0 +1,2 @@
+"C:/Users/joema/Documents/FFWModding/UncappedStatPoints/ModStage/FarFarWest/Content/Interfaces/Equipment/UI_Equipment_Item.uasset" "../../../FarFarWest/Content/Interfaces/Equipment/UI_Equipment_Item.uasset"
+"C:/Users/joema/Documents/FFWModding/UncappedStatPoints/ModStage/FarFarWest/Content/Interfaces/Equipment/UI_Equipment_Item.uexp" "../../../FarFarWest/Content/Interfaces/Equipment/UI_Equipment_Item.uexp"

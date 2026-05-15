@@ -1,0 +1,1 @@
+-Output="C:/Users/joema/Documents/FFWModding/ModBuild/pakchunk99-WeakspotEveryHit-Windows.utoc" -ContainerName=pakchunk99-WeakspotEveryHit-Windows -ResponseFile="C:/Users/joema/Documents/FFWModding/ScriptUtils/WeakspotEveryHit_IoPakList.txt"

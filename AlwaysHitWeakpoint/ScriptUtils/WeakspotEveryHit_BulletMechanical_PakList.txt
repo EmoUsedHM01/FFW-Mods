@@ -1,0 +1,4 @@
+"C:/Users/joema/Documents/FFWModding/AlwaysHitWeakpoint/ModStageBulletMechanical/FarFarWest/Content/Enemies/BP_Enemy.uasset" "../../../FarFarWest/Content/Enemies/BP_Enemy.uasset"
+"C:/Users/joema/Documents/FFWModding/AlwaysHitWeakpoint/ModStageBulletMechanical/FarFarWest/Content/Enemies/BP_Enemy.uexp" "../../../FarFarWest/Content/Enemies/BP_Enemy.uexp"
+"C:/Users/joema/Documents/FFWModding/AlwaysHitWeakpoint/ModStageBulletMechanical/FarFarWest/Content/Items/Assets/BP_PlayerBullet.uasset" "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet.uasset"
+"C:/Users/joema/Documents/FFWModding/AlwaysHitWeakpoint/ModStageBulletMechanical/FarFarWest/Content/Items/Assets/BP_PlayerBullet.uexp" "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet.uexp"

@@ -1,0 +1,6 @@
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/BP_PlayerBullet.uasset" "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet.uasset"
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/BP_PlayerBullet.uexp" "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet.uexp"
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/BP_ArrowProjectile.uasset" "../../../FarFarWest/Content/Items/Assets/BP_ArrowProjectile.uasset"
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/BP_ArrowProjectile.uexp" "../../../FarFarWest/Content/Items/Assets/BP_ArrowProjectile.uexp"
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/SheriffStar/BP_SheriffStarProjectile.uasset" "../../../FarFarWest/Content/Items/Assets/SheriffStar/BP_SheriffStarProjectile.uasset"
+"C:/Users/joema/Documents/FFWModding/ModStageConst/FarFarWest/Content/Items/Assets/SheriffStar/BP_SheriffStarProjectile.uexp" "../../../FarFarWest/Content/Items/Assets/SheriffStar/BP_SheriffStarProjectile.uexp"

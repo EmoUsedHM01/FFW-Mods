@@ -1,0 +1,2 @@
+"C:/Users/joema/Documents/FFWModding/CheaperJokers/ModStage/FarFarWest/Content/Gamework/BPFL_PlayerDatas.uasset" "../../../FarFarWest/Content/Gamework/BPFL_PlayerDatas.uasset"
+"C:/Users/joema/Documents/FFWModding/CheaperJokers/ModStage/FarFarWest/Content/Gamework/BPFL_PlayerDatas.uexp" "../../../FarFarWest/Content/Gamework/BPFL_PlayerDatas.uexp"

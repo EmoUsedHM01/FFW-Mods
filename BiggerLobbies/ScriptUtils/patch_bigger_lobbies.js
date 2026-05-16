@@ -16,6 +16,8 @@ const buildBase = path.join(buildDir, "pakchunk99-BiggerLobbies-Windows_P");
 
 const int4 = Buffer.from("04000000", "hex");
 const int16 = Buffer.from("10000000", "hex");
+const kismetInt4 = Buffer.from("1d04000000", "hex");
+const kismetInt16 = Buffer.from("1d10000000", "hex");
 const kismetInt5 = Buffer.from("1d05000000", "hex");
 const kismetInt17 = Buffer.from("1d11000000", "hex");
 const kismetInt3 = Buffer.from("1d03000000", "hex");
@@ -41,7 +43,8 @@ const assets = [
     assetDir: "Gamework",
     jsonInput: path.join(scriptUtilsDir, "BP_Manager_Multiplayer_35.json"),
     chunkId: "9891acd0db03f7ab00000001",
-    exports: [{
+    exports: [
+    {
       exportName: "Default__BP_Manager_Multiplayer_C",
       patches: [
       {
@@ -51,7 +54,19 @@ const assets = [
         replacement: int16,
       },
       ],
-    }],
+    },
+    {
+      exportName: "ExecuteUbergraph_BP_Manager_Multiplayer",
+      patches: [
+      {
+        name: "public session browser full-check 4 -> 16",
+        jsonOffset: 0x1e78,
+        expected: kismetInt4,
+        replacement: kismetInt16,
+      },
+      ],
+    },
+    ],
   },
   {
     assetName: "BP_PlayerState",

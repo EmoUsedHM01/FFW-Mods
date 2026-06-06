@@ -251,7 +251,7 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "Ag6QAgoDAQYAAADz////8/////P////z////7/////D///8AAAAAAADoPwUAAADu////8v////f////3////9P///wAAAAAAABJAAgAAAPH////2////AAAAAACAMUABAAAA9f///woAAAAAAAAA",
+      "Data": "Ag6SAgoDAQYAAADz////8/////P////z////7/////D///8AAAAAAADoPwUAAADu////8v////f////3////9P///wAAAAAAABJAAgAAAPH////2////AAAAAACAMUABAAAA9f///woAAAAAAAAA",
       "ObjectName": "Default__BP_Event_Cryptic_Totem_A_C",
       "OuterIndex": 0,
       "ClassIndex": 1,

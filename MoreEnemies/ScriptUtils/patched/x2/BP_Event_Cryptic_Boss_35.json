@@ -238,7 +238,7 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AhCPAgoDAQgAAAD5////+f////n////5////+f////b////3////9////wAAAAAAABRAAwAAAPj////0////9f///wAAAAAAACJAAwAAAPn////1////9////wAAAAAAAC5AAQAAAPr///8AAAAAAABEQAMAAAAAAAAA",
+      "Data": "AhCRAgoDAQgAAAD5////+f////n////5////+f////b////3////9////wAAAAAAABRAAwAAAPj////0////9f///wAAAAAAACJAAwAAAPn////1////9////wAAAAAAAC5AAQAAAPr///8AAAAAAABEQAMAAAAAAAAA",
       "ObjectName": "Default__BP_Event_Cryptic_Boss_C",
       "OuterIndex": 0,
       "ClassIndex": 1,

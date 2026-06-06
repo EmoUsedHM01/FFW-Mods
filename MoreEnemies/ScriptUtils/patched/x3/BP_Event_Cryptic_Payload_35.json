@@ -244,7 +244,7 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "Ag6QAgoDAQQAAAD2////9v////b////z////q6qqqqqq6j8DAAAA8v////X////5////q6qqqqqqGkACAAAA9/////T///9VVVVVVVUnQAEAAAD4////AwAAAAAAAAA=",
+      "Data": "Ag6SAgoDAQQAAAD2////9v////b////z////q6qqqqqq6j8DAAAA8v////X////5////q6qqqqqqGkACAAAA9/////T///9VVVVVVVUnQAEAAAD4////AwAAAAAAAAA=",
       "ObjectName": "Default__BP_Event_Cryptic_Payload_C",
       "OuterIndex": 0,
       "ClassIndex": 1,

@@ -1,142 +1,279 @@
 const fs = require("fs");
 const path = require("path");
+const cp = require("child_process");
 
-const root = path.resolve(__dirname, "..");
-const scriptUtilsDir = path.join(root, "ScriptUtils");
+const repoRoot = path.resolve(__dirname, "..", "..");
+const modRoot = path.resolve(__dirname, "..");
+const scriptUtilsDir = path.join(modRoot, "ScriptUtils");
 
-const rawInputDir = path.join(root, "RawChunks", "original");
-const rawOutputRoot = path.join(root, "RawChunks", "raw_mod_bullet_mechanical");
-const rawOutputDir = path.join(rawOutputRoot, "chunks");
+const tools = {
+  uassetgui: path.join(repoRoot, "UAssetGUI.exe"),
+  retoc: path.join(repoRoot, "retoc", "retoc.exe"),
+  unrealPak: "C:\\UE_5.7\\Engine\\Binaries\\Win64\\UnrealPak.exe",
+};
+
+const contentRoot = path.join(repoRoot, "FarFarWest_Unpacked_RetocLegacy", "FarFarWest", "Content");
+const sourceDir = path.join(scriptUtilsDir, "source_bullet_mechanical");
 const jsonOutputDir = path.join(scriptUtilsDir, "patched_bullet_mechanical");
-const stageRoot = path.join(root, "ModStageBulletMechanical");
+const stageRoot = path.join(modRoot, "ModStageBulletMechanical");
+const buildDir = path.join(modRoot, "ModBuild");
+const rawOutputRoot = path.join(modRoot, "RawChunks", "raw_mod_bullet_mechanical");
+const rawOutputDir = path.join(rawOutputRoot, "chunks");
+const toZenProbeRawDir = path.join(modRoot, "RawChunks", "tozen_probe_bullet_mechanical");
 const pakListPath = path.join(scriptUtilsDir, "WeakspotEveryHit_BulletMechanical_PakList.txt");
+const buildBaseName = "pakchunk99-WeakspotEveryHit-BulletMechanicalProc-Windows_P";
+const buildBase = path.join(buildDir, buildBaseName);
+const toZenProbeBase = path.join(buildDir, "pakchunk99-WeakspotEveryHit-BulletMechanicalProc-ToZenProbe-Windows_P");
+const ueVersion = "UE5_7";
+const exportIndex = "35";
 
-const chunks = {
-  enemy: "f566afc6572a67ca00000001",
-  bullet: "2ee165222bd1131e00000001",
-};
-
-const bases = {
-  enemyShowDamagesAmount: 0x22ecb,
-  bulletApplyDamages: 0x99dd,
-};
-
-const isCriticalRef = Buffer.from("00010000000a0100000000000008000000", "hex");
-const isValidRef = Buffer.from("0001000000640000000000000008000000", "hex");
+const assetSpecs = [
+  {
+    key: "enemy",
+    assetName: "BP_Enemy",
+    sourceAsset: path.join(contentRoot, "Enemies", "BP_Enemy.uasset"),
+    sourceJson: path.join(sourceDir, "BP_Enemy_35.json"),
+    patchedJson: path.join(jsonOutputDir, "BP_Enemy_35.json"),
+    stagedAsset: path.join(stageRoot, "FarFarWest", "Content", "Enemies", "BP_Enemy.uasset"),
+    mountBase: "../../../FarFarWest/Content/Enemies/BP_Enemy",
+  },
+  {
+    key: "bullet",
+    assetName: "BP_PlayerBullet",
+    sourceAsset: path.join(contentRoot, "Items", "Assets", "BP_PlayerBullet.uasset"),
+    sourceJson: path.join(sourceDir, "BP_PlayerBullet_35.json"),
+    patchedJson: path.join(jsonOutputDir, "BP_PlayerBullet_35.json"),
+    stagedAsset: path.join(stageRoot, "FarFarWest", "Content", "Items", "Assets", "BP_PlayerBullet.uasset"),
+    mountBase: "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet",
+  },
+];
 
 const patches = [
   {
     asset: "enemy",
-    file: "BP_Enemy_35.json",
     exportName: "F_ShowDamagesAmount",
     name: "F_ShowDamagesAmount SelectColor pick bool Critical -> IsValid",
-    jsonOffset: 0x874,
-    rawOffset: bases.enemyShowDamagesAmount + 0x874,
-    expected: Buffer.from("0001000000020100000000000056000000", "hex"),
-    replacement: Buffer.from("0001000000a80000000000000056000000", "hex"),
+    offset: 0x874,
+    expectedName: "Critical",
+    replacementName: "CallFunc_IsValid_ReturnValue",
+    suffix: Buffer.from("0000000056000000", "hex"),
   },
   {
     asset: "bullet",
-    file: "BP_PlayerBullet_35.json",
     exportName: "F_ApplyDamages",
     name: "F_ApplyDamages output Critical source isCritical -> IsValid",
-    jsonOffset: 0x1095,
-    rawOffset: bases.bulletApplyDamages + 0x1095,
-    expected: isCriticalRef,
-    replacement: isValidRef,
+    offset: 0x1095,
+    expectedName: "isCritical",
+    replacementName: "CallFunc_IsValid_ReturnValue",
+    suffix: Buffer.from("0000000008000000", "hex"),
   },
   {
     asset: "bullet",
-    file: "BP_PlayerBullet_35.json",
     exportName: "F_ApplyDamages",
     name: "F_ApplyDamages F_HitMarkerRequest Critical param isCritical -> IsValid",
-    jsonOffset: 0x1ec7,
-    rawOffset: bases.bulletApplyDamages + 0x1ec7,
-    expected: isCriticalRef,
-    replacement: isValidRef,
+    offset: 0x1ec7,
+    expectedName: "isCritical",
+    replacementName: "CallFunc_IsValid_ReturnValue",
+    suffix: Buffer.from("0000000008000000", "hex"),
   },
   {
     asset: "bullet",
-    file: "BP_PlayerBullet_35.json",
     exportName: "F_ApplyDamages",
     name: "F_ApplyDamages F_ApplyImpactDamages Critical param isCritical -> IsValid",
-    jsonOffset: 0x2249,
-    rawOffset: bases.bulletApplyDamages + 0x2249,
-    expected: isCriticalRef,
-    replacement: isValidRef,
+    offset: 0x2249,
+    expectedName: "isCritical",
+    replacementName: "CallFunc_IsValid_ReturnValue",
+    suffix: Buffer.from("0000000008000000", "hex"),
   },
 ];
 
-const stagedAssets = [
-  {
-    sourceBase: path.join(stageRoot, "FarFarWest", "Content", "Enemies", "BP_Enemy"),
-    mountBase: "../../../FarFarWest/Content/Enemies/BP_Enemy",
-  },
-  {
-    sourceBase: path.join(stageRoot, "FarFarWest", "Content", "Items", "Assets", "BP_PlayerBullet"),
-    mountBase: "../../../FarFarWest/Content/Items/Assets/BP_PlayerBullet",
-  },
-];
+function run(command, args, options = {}) {
+  console.log(`> ${[command, ...args].map((arg) => (/\s/.test(arg) ? `"${arg}"` : arg)).join(" ")}`);
+  cp.execFileSync(command, args, { stdio: "inherit", ...options });
+}
+
+function capture(command, args, options = {}) {
+  return cp.execFileSync(command, args, { encoding: "utf8", ...options });
+}
+
+function requireFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Missing required file: ${filePath}`);
+  }
+}
 
 function cleanDir(dir) {
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
 }
 
+function cleanBuildOutputs() {
+  fs.mkdirSync(buildDir, { recursive: true });
+  for (const base of [buildBase, toZenProbeBase]) {
+    for (const ext of [".pak", ".ucas", ".utoc"]) {
+      fs.rmSync(`${base}${ext}`, { force: true });
+    }
+  }
+}
+
+function cleanProbeOutputs() {
+  for (const ext of [".pak", ".ucas", ".utoc"]) {
+    fs.rmSync(`${toZenProbeBase}${ext}`, { force: true });
+  }
+  fs.rmSync(toZenProbeRawDir, { recursive: true, force: true });
+}
+
+function u32(value) {
+  const data = Buffer.alloc(4);
+  data.writeUInt32LE(value);
+  return data;
+}
+
+function nameRef(nameIndex, suffix) {
+  return Buffer.concat([Buffer.from("0001000000", "hex"), u32(nameIndex), suffix]);
+}
+
 function patchBytes(buffer, offset, expected, replacement, label) {
   const found = buffer.subarray(offset, offset + expected.length);
   if (!found.equals(expected)) {
-    throw new Error(`${label}: expected ${expected.toString("hex")} at 0x${offset.toString(16)}, found ${found.toString("hex")}`);
+    throw new Error(
+      `${label}: expected ${expected.toString("hex")} at 0x${offset.toString(16)}, ` +
+        `found ${found.toString("hex")}`
+    );
   }
   replacement.copy(buffer, offset);
 }
 
-cleanDir(rawOutputDir);
-cleanDir(jsonOutputDir);
-cleanDir(stageRoot);
-
-fs.writeFileSync(
-  path.join(rawOutputRoot, "manifest.json"),
-  JSON.stringify({ chunk_paths: {}, version: "ReplaceIoChunkHashWithIoHash", mount_point: "../../../" }, null, 2)
-);
-
-for (const [asset, chunkId] of Object.entries(chunks)) {
-  const input = path.join(rawInputDir, chunkId);
-  const output = path.join(rawOutputDir, chunkId);
-  const data = fs.readFileSync(input);
-  for (const patch of patches.filter((entry) => entry.asset === asset)) {
-    patchBytes(data, patch.rawOffset, patch.expected, patch.replacement, patch.name);
-    console.log(`${patch.name}: raw 0x${patch.rawOffset.toString(16)} ${patch.expected.toString("hex")} -> ${patch.replacement.toString("hex")}`);
+function loadJsonExport(jsonPath, exportName) {
+  const asset = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+  const exportEntry = (asset.Exports || []).find((entry) => entry.ObjectName === exportName);
+  if (!exportEntry || typeof exportEntry.Data !== "string") {
+    throw new Error(`${path.basename(jsonPath)}: raw export ${exportName} not found`);
   }
-  fs.writeFileSync(output, data);
+  return { asset, exportEntry };
 }
 
-for (const file of [...new Set(patches.map((patch) => patch.file))]) {
-  const input = path.join(scriptUtilsDir, file);
-  const output = path.join(jsonOutputDir, file);
-  const asset = JSON.parse(fs.readFileSync(input, "utf8"));
-  for (const patch of patches.filter((entry) => entry.file === file)) {
-    const exportEntry = asset.Exports.find((entry) => entry.ObjectName === patch.exportName);
-    if (!exportEntry || typeof exportEntry.Data !== "string") {
-      throw new Error(`${file}: ${patch.exportName} raw export not found`);
+function nameIndex(asset, name, jsonPath) {
+  const index = (asset.NameMap || []).indexOf(name);
+  if (index < 0) {
+    throw new Error(`${path.basename(jsonPath)}: name ${name} not found in NameMap`);
+  }
+  return index;
+}
+
+function patchJson(spec) {
+  const { asset, exportEntry } = loadJsonExport(spec.sourceJson, patches.find((patch) => patch.asset === spec.key).exportName);
+  const patchesForAsset = patches.filter((patch) => patch.asset === spec.key);
+
+  for (const patch of patchesForAsset) {
+    const currentExport = exportEntry.ObjectName === patch.exportName
+      ? exportEntry
+      : (asset.Exports || []).find((entry) => entry.ObjectName === patch.exportName);
+    if (!currentExport || typeof currentExport.Data !== "string") {
+      throw new Error(`${path.basename(spec.sourceJson)}: raw export ${patch.exportName} not found`);
     }
-    const data = Buffer.from(exportEntry.Data, "base64");
-    patchBytes(data, patch.jsonOffset, patch.expected, patch.replacement, patch.name);
-    exportEntry.Data = data.toString("base64");
-    console.log(`${patch.name}: json 0x${patch.jsonOffset.toString(16)} ${patch.expected.toString("hex")} -> ${patch.replacement.toString("hex")}`);
+
+    const data = Buffer.from(currentExport.Data, "base64");
+    const expected = nameRef(nameIndex(asset, patch.expectedName, spec.sourceJson), patch.suffix);
+    const replacement = nameRef(nameIndex(asset, patch.replacementName, spec.sourceJson), patch.suffix);
+
+    patchBytes(data, patch.offset, expected, replacement, patch.name);
+    currentExport.Data = data.toString("base64");
+    console.log(
+      `${patch.name}: json 0x${patch.offset.toString(16)} ` +
+        `${patch.expectedName}->${patch.replacementName} ` +
+        `(${expected.toString("hex")} -> ${replacement.toString("hex")})`
+    );
   }
-  fs.writeFileSync(output, JSON.stringify(asset, null, 2));
+
+  fs.mkdirSync(path.dirname(spec.patchedJson), { recursive: true });
+  fs.writeFileSync(spec.patchedJson, JSON.stringify(asset, null, 2));
 }
 
-for (const asset of stagedAssets) {
-  fs.mkdirSync(path.dirname(asset.sourceBase), { recursive: true });
+function findExportBundleChunkIds(utocPath) {
+  const output = capture(tools.retoc, ["list", utocPath]);
+  const matches = output
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line.includes(" ExportBundleData"));
+
+  if (matches.length !== assetSpecs.length) {
+    throw new Error(`Expected ${assetSpecs.length} ExportBundleData chunks in ${utocPath}, found ${matches.length}.`);
+  }
+
+  return matches.map((match) => {
+    const parts = match.split(/\s+/);
+    if (parts.length < 2 || !/^[0-9a-f]+$/i.test(parts[1])) {
+      throw new Error(`Could not parse ExportBundleData chunk id from: ${match}`);
+    }
+    return parts[1];
+  });
 }
 
-const pakList = [];
-for (const asset of stagedAssets) {
-  for (const ext of [".uasset", ".uexp"]) {
-    pakList.push(`"${asset.sourceBase.replaceAll("\\", "/")}${ext}" "${asset.mountBase}${ext}"`);
-  }
+function writeRawManifest() {
+  fs.writeFileSync(
+    path.join(rawOutputRoot, "manifest.json"),
+    JSON.stringify({ chunk_paths: {}, version: "ReplaceIoChunkHashWithIoHash", mount_point: "../../../" }, null, 2)
+  );
 }
-fs.writeFileSync(pakListPath, `${pakList.join("\n")}\n`);
-console.log(`wrote ${pakListPath}`);
+
+function writePakList() {
+  const lines = [];
+  for (const spec of assetSpecs) {
+    const stagedBase = spec.stagedAsset.replace(/\.uasset$/i, "");
+    for (const ext of [".uasset", ".uexp"]) {
+      lines.push(`"${`${stagedBase}${ext}`.replaceAll("\\", "/")}" "${spec.mountBase}${ext}"`);
+    }
+  }
+  fs.writeFileSync(pakListPath, `${lines.join("\n")}\n`);
+}
+
+function main() {
+  requireFile(tools.uassetgui);
+  requireFile(tools.retoc);
+  requireFile(tools.unrealPak);
+  for (const spec of assetSpecs) {
+    requireFile(spec.sourceAsset);
+  }
+
+  cleanDir(sourceDir);
+  cleanDir(jsonOutputDir);
+  cleanDir(stageRoot);
+  cleanDir(rawOutputDir);
+  cleanBuildOutputs();
+
+  for (const spec of assetSpecs) {
+    run(tools.uassetgui, ["tojson", spec.sourceAsset, spec.sourceJson, exportIndex]);
+    patchJson(spec);
+    fs.mkdirSync(path.dirname(spec.stagedAsset), { recursive: true });
+    run(tools.uassetgui, ["fromjson", spec.patchedJson, spec.stagedAsset]);
+  }
+
+  run(tools.retoc, ["to-zen", "--version", ueVersion, stageRoot, `${toZenProbeBase}.utoc`]);
+  const exportBundleChunkIds = findExportBundleChunkIds(`${toZenProbeBase}.utoc`);
+  run(tools.retoc, ["unpack-raw", `${toZenProbeBase}.utoc`, toZenProbeRawDir]);
+
+  writeRawManifest();
+  for (const exportBundleChunkId of exportBundleChunkIds) {
+    fs.copyFileSync(
+      path.join(toZenProbeRawDir, "chunks", exportBundleChunkId),
+      path.join(rawOutputDir, exportBundleChunkId)
+    );
+  }
+
+  run(tools.retoc, ["pack-raw", rawOutputRoot, `${buildBase}.utoc`]);
+  writePakList();
+  run(tools.unrealPak, [`${buildBase}.pak`, `-Create=${pakListPath}`]);
+  cleanProbeOutputs();
+
+  for (const ext of [".pak", ".ucas", ".utoc"]) {
+    requireFile(`${buildBase}${ext}`);
+  }
+
+  console.log("");
+  console.log("AlwaysHitWeakpoint rebuilt with current BP_Enemy and BP_PlayerBullet assets.");
+  console.log(`Raw override chunks: ${exportBundleChunkIds.join(", ")}`);
+  console.log(`Output: ${buildBase}.pak/.ucas/.utoc`);
+}
+
+main();

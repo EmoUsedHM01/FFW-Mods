@@ -8,7 +8,6 @@ From this folder:
 
 ```powershell
 node ScriptUtils\patch_cheap_jokers.js
-..\UAssetGUI.exe fromjson ScriptUtils\patched\BPFL_PlayerDatas_35.json ModStage\FarFarWest\Content\Gamework\BPFL_PlayerDatas.uasset 35
 ..\retoc\retoc.exe pack-raw RawChunks\raw_mod ModBuild\pakchunk99-CheapJokers-Windows_P.utoc
 & 'C:\UE_5.7\Engine\Binaries\Win64\UnrealPak.exe' "$PWD\ModBuild\pakchunk99-CheapJokers-Windows_P.pak" -Create="$PWD\ScriptUtils\CheapJokers_PakList.txt"
 ```

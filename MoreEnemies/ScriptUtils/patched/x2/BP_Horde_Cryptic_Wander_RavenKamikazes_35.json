@@ -53,6 +53,8 @@
     "Default__SimpleConstructionScript",
     "SkeletalMeshComponent",
     "CharacterMesh0",
+    "SphereComponent",
+    "NODE_AddSphereComponent-0",
     "/Script/GameplayStateTreeModule",
     "StateTreeComponent",
     "StateTree_GEN_VARIABLE",
@@ -176,7 +178,7 @@
       "TemplateIndex": -8,
       "ObjectFlags": "RF_Public, RF_Transactional",
       "SerialSize": 115,
-      "SerialOffset": 4760,
+      "SerialOffset": 4850,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -214,7 +216,7 @@
       "TemplateIndex": -14,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ClassDefaultObject, RF_ArchetypeObject",
       "SerialSize": 82,
-      "SerialOffset": 4875,
+      "SerialOffset": 4965,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -228,7 +230,7 @@
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
         5,
-        -55
+        -56
       ],
       "CreateBeforeSerializationDependencies": [
         -6,
@@ -253,7 +255,7 @@
       "TemplateIndex": -29,
       "ObjectFlags": "RF_NoFlags",
       "SerialSize": 57,
-      "SerialOffset": 4957,
+      "SerialOffset": 5047,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -289,7 +291,7 @@
       "TemplateIndex": -44,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject",
       "SerialSize": 10,
-      "SerialOffset": 5014,
+      "SerialOffset": 5104,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -324,7 +326,7 @@
       "TemplateIndex": -44,
       "ObjectFlags": "RF_Public, RF_ArchetypeObject, RF_InheritableComponentTemplate",
       "SerialSize": 10,
-      "SerialOffset": 5024,
+      "SerialOffset": 5114,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -359,7 +361,7 @@
       "TemplateIndex": -45,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 40,
-      "SerialOffset": 5034,
+      "SerialOffset": 5124,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -394,7 +396,7 @@
       "TemplateIndex": -46,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 10,
-      "SerialOffset": 5074,
+      "SerialOffset": 5164,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -885,6 +887,15 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "NODE_AddSphereComponent-0",
+      "OuterIndex": -5,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SphereComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "StateTree_GEN_VARIABLE",
       "OuterIndex": -3,
       "ClassPackage": "/Script/GameplayStateTreeModule",
@@ -953,7 +964,7 @@
     {
       "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
       "ExportCount": 7,
-      "NameCount": 56
+      "NameCount": 58
     }
   ],
   "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
@@ -979,7 +990,7 @@
   "FolderName": "/Game/Enemies/Hordes/BP_Horde_Cryptic_Wander_RavenKamikazes",
   "LocalizationId": null,
   "SoftObjectPathsCount": 0,
-  "SoftObjectPathsOffset": 2144,
+  "SoftObjectPathsOffset": 2202,
   "SearchableNamesOffset": 0,
   "ThumbnailTableOffset": 0,
   "ImportTypeHierarchiesCount": 0,

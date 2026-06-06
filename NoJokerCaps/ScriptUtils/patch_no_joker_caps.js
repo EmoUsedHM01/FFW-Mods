@@ -13,6 +13,7 @@ const buildBase = path.join(buildDir, "pakchunk99-NoJokerCaps-Windows_P");
 const assetName = "DT_PlayerJokers";
 const assetDir = "Progress";
 const targetMax = 10;
+const minimumExpectedRows = 90;
 const expectedHeader = 0x2780;
 const textMarker = Buffer.from("ST_UI", "ascii");
 
@@ -28,6 +29,43 @@ function endCString(buffer, offset, limit, label) {
     throw new Error(`${label}: unterminated string at 0x${offset.toString(16)}`);
   }
   return end + 1;
+}
+
+function findMaxAvailableAfterSerializedText(data, row, nextOffset) {
+  const candidates = [];
+
+  for (let offset = row.offset; offset + 4 < nextOffset; offset++) {
+    const length = data.readInt32LE(offset);
+    if (length < 2 || length > 512 || offset + 4 + length > nextOffset) continue;
+
+    const textStart = offset + 4;
+    const textEnd = textStart + length;
+    if (data[textEnd - 1] !== 0) continue;
+
+    let printable = true;
+    for (let index = textStart; index < textEnd - 1; index++) {
+      if (data[index] < 32 || data[index] > 126) {
+        printable = false;
+        break;
+      }
+    }
+    if (!printable) continue;
+
+    const maxOffset = textEnd + 9;
+    if (maxOffset + 4 > nextOffset || data[textEnd] !== 1) continue;
+
+    const value = data.readDoubleLE(textEnd + 1);
+    const current = data.readInt32LE(maxOffset);
+    if (Number.isFinite(value) && value >= 0 && value <= 100 && current >= 1 && current <= 64) {
+      candidates.push({ maxOffset, current });
+    }
+  }
+
+  if (candidates.length === 0) {
+    throw new Error(`${row.rowName}: maxAvailable field not found`);
+  }
+
+  return candidates[candidates.length - 1];
 }
 
 function findJokerRows(data, nameMap) {
@@ -48,8 +86,8 @@ function findJokerRows(data, nameMap) {
   }
 
   rows.sort((a, b) => a.offset - b.offset);
-  if (rows.length !== 95) {
-    throw new Error(`${assetName}: expected 95 non-upgrade Joker rows, found ${rows.length}`);
+  if (rows.length < minimumExpectedRows) {
+    throw new Error(`${assetName}: expected at least ${minimumExpectedRows} non-upgrade Joker rows, found ${rows.length}`);
   }
   return rows;
 }
@@ -57,7 +95,7 @@ function findJokerRows(data, nameMap) {
 function findMaxAvailableOffset(data, row, nextOffset) {
   const firstTextOffset = data.indexOf(textMarker, row.offset);
   if (firstTextOffset < 0 || firstTextOffset >= nextOffset) {
-    throw new Error(`${row.rowName}: name text marker not found`);
+    return findMaxAvailableAfterSerializedText(data, row, nextOffset);
   }
 
   const afterFirstText = endCString(data, firstTextOffset, nextOffset, row.rowName);

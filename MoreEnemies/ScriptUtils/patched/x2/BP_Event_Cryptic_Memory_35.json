@@ -254,7 +254,7 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAICDpACCgMBAAEFAAAA+f////n////5////+f////f///8AAAAAAAD0PwMAAAD4////9v////b///8AAAAAAAAZQAEAAAD6////AAAAAAAALkABAAAA9f///wMAAAAAAAAA",
+      "Data": "AAICDpICCgMBAAEFAAAA+f////n////5////+f////f///8AAAAAAAD0PwMAAAD4////9v////b///8AAAAAAAAZQAEAAAD6////AAAAAAAALkABAAAA9f///wMAAAAAAAAA",
       "ObjectName": "Default__BP_Event_Cryptic_Memory_C",
       "OuterIndex": 0,
       "ClassIndex": 1,

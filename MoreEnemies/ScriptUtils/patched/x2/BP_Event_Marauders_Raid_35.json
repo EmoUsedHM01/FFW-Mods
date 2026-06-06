@@ -210,7 +210,7 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AgwGAgoCigYBAwQCAAAA/f////7///8AAAAAAAAAQAIAAAD9/////v///wAAAAAAABBAAgAAAP3////+////AAAAAAAAGkAAAPpEAAAAAACAVkABAAAAAADIQQEAAAAA",
+      "Data": "AgwIAgoCigYBAwQCAAAA/f////7///8AAAAAAAAAQAIAAAD9/////v///wAAAAAAABBAAgAAAP3////+////AAAAAAAAGkAAAPpEAAAAAACAVkABAAAAAADIQQEAAAAA",
       "ObjectName": "Default__BP_Event_Marauders_Raid_C",
       "OuterIndex": 0,
       "ClassIndex": 1,

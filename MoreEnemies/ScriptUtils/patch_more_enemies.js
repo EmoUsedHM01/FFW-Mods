@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { execFileSync } = require("child_process");
+const { execFileSync, spawnSync } = require("child_process");
 
 const DEFAULT_MULTIPLIERS = [2, 3, 4, 5, 10];
 const requestedMultipliers = process.argv.slice(2).map((value) => Number.parseInt(value, 10));
@@ -50,11 +50,17 @@ const hordeAssets = [
   "BP_Horde_Cryptic_Wander_Revolvers",
   "BP_Horde_Cryptic_Wander_Shielders",
   "BP_Horde_Halloween2025",
+  { assetName: "BP_Horde_HellFire", assetDir: path.join("Modifiers", "Assets", "HellFire") },
 ];
 
 const assets = [
   ...eventAssets.map((assetName) => ({ assetName, assetDir: "Events", patchKind: "event" })),
-  ...hordeAssets.map((assetName) => ({ assetName, assetDir: path.join("Enemies", "Hordes"), patchKind: "horde" })),
+  ...hordeAssets.map((asset) => {
+    if (typeof asset === "string") {
+      return { assetName: asset, assetDir: path.join("Enemies", "Hordes"), patchKind: "horde" };
+    }
+    return { patchKind: "horde", ...asset };
+  }),
 ];
 
 function cleanDir(dir) {
@@ -70,6 +76,37 @@ function ensureTool(filePath) {
 
 function runTool(command, args) {
   execFileSync(command, args, { stdio: "inherit" });
+}
+
+function formatStatus(result) {
+  if (result.signal) {
+    return `signal ${result.signal}`;
+  }
+  return `exit ${result.status}`;
+}
+
+function runToolWithGeneratedOutput(command, args, expectedFiles) {
+  const result = spawnSync(command, args, { stdio: "inherit" });
+  if (result.error) {
+    throw result.error;
+  }
+  if (result.status === 0) {
+    return;
+  }
+
+  const missingFiles = expectedFiles.filter((filePath) => {
+    if (!fs.existsSync(filePath)) {
+      return true;
+    }
+    return fs.statSync(filePath).size === 0;
+  });
+
+  if (missingFiles.length === 0) {
+    console.warn(`${path.basename(command)} returned ${formatStatus(result)} after writing output; continuing`);
+    return;
+  }
+
+  throw new Error(`${path.basename(command)} failed with ${formatStatus(result)}; missing ${missingFiles.join(", ")}`);
 }
 
 function jsonPathFor(dir, assetName) {
@@ -324,7 +361,13 @@ function patchAsset(asset, multiplier, activePatchedJsonDir) {
 function stageAsset(asset, activeStageRoot) {
   const target = stagePath(asset, activeStageRoot);
   fs.mkdirSync(path.dirname(target), { recursive: true });
-  runTool(uassetGui, ["fromjson", asset.jsonPath, target, "35"]);
+  const expectedFiles = [target];
+  for (const extension of [".uexp", ".ubulk"]) {
+    if (fs.existsSync(assetPath(asset).replace(/\.uasset$/i, extension))) {
+      expectedFiles.push(target.replace(/\.uasset$/i, extension));
+    }
+  }
+  runToolWithGeneratedOutput(uassetGui, ["fromjson", asset.jsonPath, target, "35"], expectedFiles);
 }
 
 function cleanBuildOutputs() {

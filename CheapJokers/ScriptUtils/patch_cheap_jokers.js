@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
+const repoRoot = path.resolve(root, "..");
 const scriptUtilsDir = path.join(root, "ScriptUtils");
 
 const jsonInput = path.join(scriptUtilsDir, "BPFL_PlayerDatas_35.json");
@@ -17,15 +18,16 @@ const chunkId = "b15f3e3c3aa1db3c00000001";
 const assetName = "BPFL_PlayerDatas";
 const exportName = "F_GetRequiredSlotsOfRarity";
 const assetDir = "Gamework";
+const sourceAssetBase = path.join(repoRoot, "FarFarWest_Unpacked_RetocLegacy", "FarFarWest", "Content", assetDir, assetName);
 
 const intConst1 = Buffer.from("1d01000000", "hex");
 
 const patches = [
-  { name: "rarity slot cost 5 -> 1 (case 0)", jsonOffset: 0x280, rawOffset: 0x3b03, expected: Buffer.from("1d05000000", "hex"), replacement: intConst1 },
-  { name: "rarity slot cost 5 -> 1 (case 1)", jsonOffset: 0x2a7, rawOffset: 0x3b2a, expected: Buffer.from("1d05000000", "hex"), replacement: intConst1 },
-  { name: "rarity slot cost 4 -> 1", jsonOffset: 0x2ce, rawOffset: 0x3b51, expected: Buffer.from("1d04000000", "hex"), replacement: intConst1 },
-  { name: "rarity slot cost 3 -> 1", jsonOffset: 0x2f5, rawOffset: 0x3b78, expected: Buffer.from("1d03000000", "hex"), replacement: intConst1 },
-  { name: "rarity slot cost 2 -> 1", jsonOffset: 0x31c, rawOffset: 0x3b9f, expected: Buffer.from("1d02000000", "hex"), replacement: intConst1 },
+  { name: "rarity slot cost 5 -> 1 (case 0)", jsonOffset: 0x280, rawOffset: 0x3e1d, expected: Buffer.from("1d05000000", "hex"), replacement: intConst1 },
+  { name: "rarity slot cost 5 -> 1 (case 1)", jsonOffset: 0x2a7, rawOffset: 0x3e44, expected: Buffer.from("1d05000000", "hex"), replacement: intConst1 },
+  { name: "rarity slot cost 4 -> 1", jsonOffset: 0x2ce, rawOffset: 0x3e6b, expected: Buffer.from("1d04000000", "hex"), replacement: intConst1 },
+  { name: "rarity slot cost 3 -> 1", jsonOffset: 0x2f5, rawOffset: 0x3e92, expected: Buffer.from("1d03000000", "hex"), replacement: intConst1 },
+  { name: "rarity slot cost 2 -> 1", jsonOffset: 0x31c, rawOffset: 0x3eb9, expected: Buffer.from("1d02000000", "hex"), replacement: intConst1 },
 ];
 
 function cleanDir(dir) {
@@ -77,10 +79,26 @@ fs.writeFileSync(path.join(jsonOutputDir, `${assetName}_35.json`), JSON.stringif
 const sourceBase = path.join(stageRoot, "FarFarWest", "Content", assetDir, assetName);
 const mountBase = `../../../FarFarWest/Content/${assetDir}/${assetName}`;
 fs.mkdirSync(path.dirname(sourceBase), { recursive: true });
+fs.copyFileSync(`${sourceAssetBase}.uasset`, `${sourceBase}.uasset`);
+
+const stagedUexp = fs.readFileSync(`${sourceAssetBase}.uexp`);
+const uexpBaseOffset = exportEntry.SerialOffset - fs.statSync(`${sourceAssetBase}.uasset`).size;
+if (uexpBaseOffset < 0) {
+  throw new Error(`${assetName}: invalid ${exportName} uexp base offset ${uexpBaseOffset}`);
+}
+for (const patch of patches) {
+  const uexpOffset = uexpBaseOffset + patch.jsonOffset;
+  patchBytes(stagedUexp, uexpOffset, patch.expected, patch.replacement, `${patch.name} uexp`);
+  console.log(`${patch.name}: uexp 0x${uexpOffset.toString(16)} ${patch.expected.toString("hex")} -> ${patch.replacement.toString("hex")}`);
+}
+fs.writeFileSync(`${sourceBase}.uexp`, stagedUexp);
+
 fs.writeFileSync(
   pakListPath,
   [`"${sourceBase.replaceAll("\\", "/")}.uasset" "${mountBase}.uasset"`, `"${sourceBase.replaceAll("\\", "/")}.uexp" "${mountBase}.uexp"`].join("\n") + "\n"
 );
 
 console.log(`wrote ${path.join(jsonOutputDir, `${assetName}_35.json`)}`);
+console.log(`wrote ${sourceBase}.uasset`);
+console.log(`wrote ${sourceBase}.uexp`);
 console.log(`wrote ${pakListPath}`);

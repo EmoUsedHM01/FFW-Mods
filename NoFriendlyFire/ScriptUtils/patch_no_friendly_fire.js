@@ -34,26 +34,26 @@ const ubergraphName = "ExecuteUbergraph_BP_Player";
 // This patch edits only existing instructions:
 // - player-controlled causer + Causer != Self now goes to the original no-damage path
 // - Causer is compared against NoObject instead of Self so self-spell damage uses that path too
-const prologueDataOffset = 0x10329;
+const prologueDataOffset = 0xfced;
 const originalPrologue = Buffer.from(
-  "076d5700000001000000fe0000000000000015000000140001000000ad000000000000001500000068d9feffff00010000002c03000000000000150000001716072c5900000001000000ad0000000000000015000000",
+  "07b75100000001000000ff0000000000000015000000140001000000ae000000000000001500000068d8feffff0001000000340300000000000015000000171607765300000001000000ae0000000000000015000000",
   "hex"
 );
-const branchOpcodeDataOffset = 0x10369;
-const branchTargetDataOffset = 0x1036a;
-const originalFriendlyFireScriptOffset = 0x592c;
-const noDamageScriptOffset = 0x5627;
-const selfComparisonOperandDataOffset = 0x10367;
-const conditionDataOffset = 0x1036e;
-const expectedConditionBytes = Buffer.from("0001000000ad0000000000000015000000", "hex");
+const branchOpcodeDataOffset = 0xfd2d;
+const branchTargetDataOffset = 0xfd2e;
+const originalFriendlyFireScriptOffset = 0x5376;
+const noDamageScriptOffset = 0x5071;
+const selfComparisonOperandDataOffset = 0xfd2b;
+const conditionDataOffset = 0xfd32;
+const expectedConditionBytes = Buffer.from("0001000000ae0000000000000015000000", "hex");
 const selfToken = 0x17;
 const noObjectToken = 0x2a;
-const playerStateCastBranchOpcodeDataOffset = 0x108f4;
-const playerStateCastConditionDataOffset = 0x108f9;
-const playerStateCastSuccessJumpOpcodeDataOffset = 0x1090a;
-const playerStateCastSuccessJumpTargetDataOffset = 0x1090b;
-const playerStateCastFailureScriptOffset = 0x576d;
-const expectedPlayerStateCastConditionBytes = Buffer.from("0001000000220300000b00000015000000", "hex");
+const playerStateCastBranchOpcodeDataOffset = 0x10303;
+const playerStateCastConditionDataOffset = 0x10308;
+const playerStateCastSuccessJumpOpcodeDataOffset = 0x10319;
+const playerStateCastSuccessJumpTargetDataOffset = 0x1031a;
+const playerStateCastFailureScriptOffset = 0x51b7;
+const expectedPlayerStateCastConditionBytes = Buffer.from("00010000002a0300000a00000015000000", "hex");
 
 
 function run(command, args, options = {}) {
@@ -98,14 +98,15 @@ function writeRawManifest() {
   );
 }
 
-function findExportBundleChunkIds(utocPath) {
+function findRawOverrideChunkIds(utocPath) {
   const output = capture(tools.retoc, ["list", utocPath]);
   const matches = output
     .split(/\r?\n/)
     .map((line) => line.trim())
-    .filter((line) => line.includes(" ExportBundleData"));
+    .filter((line) => line.includes(" ExportBundleData") || line.includes(" ContainerHeader"));
 
-  if (matches.length < 1) {
+  const exportBundleMatches = matches.filter((line) => line.includes(" ExportBundleData"));
+  if (exportBundleMatches.length < 1) {
     throw new Error(`Expected at least one ExportBundleData chunk in ${utocPath}, found none.`);
   }
 
@@ -254,14 +255,14 @@ function main() {
   run(tools.uassetgui, ["fromjson", patchedJson, stagedAsset]);
 
   run(tools.retoc, ["to-zen", "--version", ueVersion, stageRoot, `${toZenProbeBase}.utoc`]);
-  const exportBundleChunkIds = findExportBundleChunkIds(`${toZenProbeBase}.utoc`);
+  const rawOverrideChunkIds = findRawOverrideChunkIds(`${toZenProbeBase}.utoc`);
   run(tools.retoc, ["unpack-raw", `${toZenProbeBase}.utoc`, toZenProbeRawDir]);
 
   writeRawManifest();
-  for (const exportBundleChunkId of exportBundleChunkIds) {
+  for (const rawOverrideChunkId of rawOverrideChunkIds) {
     fs.copyFileSync(
-      path.join(toZenProbeRawDir, "chunks", exportBundleChunkId),
-      path.join(rawOutputDir, exportBundleChunkId)
+      path.join(toZenProbeRawDir, "chunks", rawOverrideChunkId),
+      path.join(rawOutputDir, rawOverrideChunkId)
     );
   }
 
@@ -277,7 +278,7 @@ function main() {
 
   console.log("");
   console.log("NoFriendlyFire rebuilt with BP_Player endpoint branch patches.");
-  console.log(`Raw override chunks: ${exportBundleChunkIds.join(", ")}`);
+  console.log(`Raw override chunks: ${rawOverrideChunkIds.join(", ")}`);
   console.log(
     `Patched existing JumpIfNot target at data 0x${branchTargetDataOffset.toString(16)} ` +
       `from 0x${originalFriendlyFireScriptOffset.toString(16)} to 0x${noDamageScriptOffset.toString(16)}.`

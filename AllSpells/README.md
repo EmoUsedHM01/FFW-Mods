@@ -8,10 +8,12 @@ From this folder:
 
 ```powershell
 node ScriptUtils\patch_all_spells.js
-Get-ChildItem ScriptUtils\patched -Filter "*_35.json" | ForEach-Object { $assetName = $_.BaseName -replace "_35$",""; ..\UAssetGUI.exe fromjson $_.FullName (Join-Path "ModStage\FarFarWest\Content\Spells" ($assetName + ".uasset")) 35 }
-..\retoc\retoc.exe pack-raw RawChunks\raw_mod ModBuild\pakchunk99-AllSpells-Windows_P.utoc
-& 'C:\UE_5.7\Engine\Binaries\Win64\UnrealPak.exe' "$PWD\ModBuild\pakchunk99-AllSpells-Windows_P.pak" -Create="$PWD\ScriptUtils\AllSpells_PakList.txt"
 ```
+
+The script exports current spell assets from
+`..\FarFarWest_Unpacked_RetocLegacy\FarFarWest\Content\Spells`, patches the
+required levels, stages the cooked assets, derives fresh raw override chunks
+with `retoc to-zen`, and writes the final pak/ucas/utoc triplet.
 
 Install this triplet into `FarFarWest\Content\Paks\~mods`:
 
@@ -23,4 +25,5 @@ ModBuild/pakchunk99-AllSpells-Windows_P.utoc
 
 ## Notes
 
-Five spells already had level requirement `1`; the patch changes the other 20 spell assets.
+Five spells already had level requirement `1` in the June 6, 2026 game files;
+the patch changes the other 20 spell assets.

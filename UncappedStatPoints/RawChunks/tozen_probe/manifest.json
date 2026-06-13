@@ -1,0 +1,7 @@
+{
+  "chunk_paths": {
+    "fa01240fdd86e30c00000001": "../../../FarFarWest/Content/Interfaces/Equipment/UI_Equipment_Item.uasset"
+  },
+  "version": "ReplaceIoChunkHashWithIoHash",
+  "mount_point": "../../../"
+}

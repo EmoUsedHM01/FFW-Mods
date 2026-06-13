@@ -27,35 +27,8 @@ const toZenProbeRawDir = path.join(modRoot, "RawChunks", "tozen_probe");
 const jsonOutputDir = path.join(scriptUtilsDir, "patched");
 const pakListPath = path.join(scriptUtilsDir, "AllSpells_PakList.txt");
 
-const assets = [
-  "BP_Item_SpellCast_Acid_Bubble",
-  "BP_Item_SpellCast_Acid_Contagion",
-  "BP_Item_SpellCast_Acid_Geyser",
-  "BP_Item_SpellCast_Acid_Rain",
-  "BP_Item_SpellCast_Acid_Thrower",
-  "BP_Item_SpellCast_Cactus_Betty",
-  "BP_Item_SpellCast_Cactus_Decoy",
-  "BP_Item_SpellCast_Cactus_Turret",
-  "BP_Item_SpellCast_Cactus_Ulti",
-  "BP_Item_SpellCast_Cactus_Wall",
-  "BP_Item_SpellCast_Elec_Portal",
-  "BP_Item_SpellCast_Elec_Strike",
-  "BP_Item_SpellCast_Elec_SuperJump",
-  "BP_Item_SpellCast_Elec_Swap",
-  "BP_Item_SpellCast_Elec_ThunderStrike",
-  "BP_Item_SpellCast_Fire_Ball",
-  "BP_Item_SpellCast_Fire_Beam",
-  "BP_Item_SpellCast_Fire_Fingergun",
-  "BP_Item_SpellCast_Fire_Surcharge",
-  "BP_Item_SpellCast_Fire_Wisp",
-  "BP_Item_SpellCast_Voodoo_Corruption",
-  "BP_Item_SpellCast_Voodoo_Doll",
-  "BP_Item_SpellCast_Voodoo_Drain",
-  "BP_Item_SpellCast_Voodoo_Heal",
-  "BP_Item_SpellCast_Voodoo_HealArea",
-];
-
 const expectedLevels = new Set([1, 4, 7, 8, 12, 20, 35]);
+const spellClassElements = new Set([7, 8, 9, 12, 13, 15]);
 const intOne = Buffer.from("01000000", "hex");
 
 function run(command, args, options = {}) {
@@ -110,23 +83,71 @@ function stagedAssetPath(assetName) {
   return path.join(stageRoot, "FarFarWest", "Content", assetDir, `${assetName}.uasset`);
 }
 
-function findLevelOffset(assetName, data) {
-  const marker = Buffer.from("_Name\0", "ascii");
-  const nameEnd = data.lastIndexOf(marker) + marker.length;
-  if (nameEnd < marker.length) {
-    throw new Error(`${assetName}: title text marker not found`);
+function discoverSpellAssets() {
+  const spellsDir = path.join(contentRoot, assetDir);
+  requireFile(spellsDir);
+
+  const assets = fs
+    .readdirSync(spellsDir)
+    .filter((fileName) => /^BP_Item_SpellCast_.*\.uasset$/i.test(fileName))
+    .map((fileName) => path.basename(fileName, ".uasset"))
+    .sort((a, b) => a.localeCompare(b));
+
+  if (assets.length === 0) {
+    throw new Error(`No spell cast assets found in ${spellsDir}`);
   }
 
-  const candidates = [nameEnd + 5, nameEnd + 4];
-  for (const offset of candidates) {
-    if (offset + 4 > data.length) continue;
-    const value = data.readInt32LE(offset);
-    if (expectedLevels.has(value)) {
-      return { offset, value };
+  return assets;
+}
+
+function findObjectElementLevelCandidates(data) {
+  const candidates = [];
+  for (let offset = 0; offset <= data.length - 9; offset += 1) {
+    const objectIndex = data.readInt32LE(offset);
+    const element = data[offset + 4];
+    const value = data.readInt32LE(offset + 5);
+
+    if (objectIndex < 0 && objectIndex > -1000 && spellClassElements.has(element) && expectedLevels.has(value)) {
+      candidates.push({ offset: offset + 5, value });
     }
   }
 
-  throw new Error(`${assetName}: requiredMinimumLevel not found near title text tail`);
+  return candidates;
+}
+
+function findLevelOffset(assetName, data) {
+  const marker = Buffer.from("_Name\0", "ascii");
+  const markerOffset = data.lastIndexOf(marker);
+
+  if (markerOffset >= 0) {
+    const nameEnd = markerOffset + marker.length;
+    const candidates = [nameEnd + 5, nameEnd + 4];
+    for (const offset of candidates) {
+      if (offset + 4 > data.length) continue;
+      const value = data.readInt32LE(offset);
+      if (expectedLevels.has(value)) {
+        return { offset, value };
+      }
+    }
+  }
+
+  const candidates = findObjectElementLevelCandidates(data);
+  if (candidates.length === 1) {
+    return candidates[0];
+  }
+  if (candidates.length > 1) {
+    throw new Error(
+      `${assetName}: found multiple candidate requiredMinimumLevel values: ${candidates
+        .map((candidate) => `0x${candidate.offset.toString(16)}=${candidate.value}`)
+        .join(", ")}`
+    );
+  }
+
+  if (markerOffset >= 0) {
+    throw new Error(`${assetName}: requiredMinimumLevel not found near title text tail`);
+  }
+
+  return null;
 }
 
 function getDefaultExport(asset, assetName) {
@@ -143,7 +164,14 @@ function patchAsset(assetName) {
   const asset = JSON.parse(fs.readFileSync(jsonInput, "utf8"));
   const exportEntry = getDefaultExport(asset, assetName);
   const data = Buffer.from(exportEntry.Data, "base64");
-  const { offset, value } = findLevelOffset(assetName, data);
+  const level = findLevelOffset(assetName, data);
+
+  if (!level) {
+    console.log(`${assetName}: no serialized requiredMinimumLevel found; leaving unchanged`);
+    return null;
+  }
+
+  const { offset, value } = level;
 
   if (value === 1) {
     console.log(`${assetName}: requiredMinimumLevel already 1`);
@@ -218,9 +246,12 @@ function main() {
   requireFile(tools.uassetgui);
   requireFile(tools.retoc);
   requireFile(tools.unrealPak);
+  const assets = discoverSpellAssets();
   for (const assetName of assets) {
     requireFile(sourceAssetPath(assetName));
   }
+
+  console.log(`Discovered ${assets.length} spell cast assets in ${path.join(contentRoot, assetDir)}`);
 
   cleanDir(jsonOutputDir);
   cleanDir(stageRoot);

@@ -1,0 +1,7 @@
+{
+  "chunk_paths": {
+    "11e80086b995ae4a00000001": "../../../FarFarWest/Content/Player/BP_Player.uasset"
+  },
+  "version": "ReplaceIoChunkHashWithIoHash",
+  "mount_point": "../../../"
+}

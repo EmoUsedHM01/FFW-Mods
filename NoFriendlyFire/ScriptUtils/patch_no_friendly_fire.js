@@ -34,26 +34,26 @@ const ubergraphName = "ExecuteUbergraph_BP_Player";
 // This patch edits only existing instructions:
 // - player-controlled causer + Causer != Self now goes to the original no-damage path
 // - Causer is compared against NoObject instead of Self so self-spell damage uses that path too
-const prologueDataOffset = 0xfced;
+const prologueDataOffset = 0xfbd7;
 const originalPrologue = Buffer.from(
-  "07b75100000001000000ff0000000000000015000000140001000000ae000000000000001500000068d8feffff0001000000340300000000000015000000171607765300000001000000ae0000000000000015000000",
+  "07da4d00000001000000030100000000000016000000140001000000b1000000000000001600000068d4feffff00010000003f03000000000000160000001716071c5000000001000000b10000000000000016000000",
   "hex"
 );
-const branchOpcodeDataOffset = 0xfd2d;
-const branchTargetDataOffset = 0xfd2e;
-const originalFriendlyFireScriptOffset = 0x5376;
-const noDamageScriptOffset = 0x5071;
-const selfComparisonOperandDataOffset = 0xfd2b;
-const conditionDataOffset = 0xfd32;
-const expectedConditionBytes = Buffer.from("0001000000ae0000000000000015000000", "hex");
+const branchOpcodeDataOffset = 0xfc17;
+const branchTargetDataOffset = 0xfc18;
+const originalFriendlyFireScriptOffset = 0x501c;
+const noDamageScriptOffset = 0x4c94;
+const selfComparisonOperandDataOffset = 0xfc15;
+const conditionDataOffset = 0xfc1c;
+const expectedConditionBytes = Buffer.from("0001000000b10000000000000016000000", "hex");
 const selfToken = 0x17;
 const noObjectToken = 0x2a;
-const playerStateCastBranchOpcodeDataOffset = 0x10303;
-const playerStateCastConditionDataOffset = 0x10308;
-const playerStateCastSuccessJumpOpcodeDataOffset = 0x10319;
-const playerStateCastSuccessJumpTargetDataOffset = 0x1031a;
-const playerStateCastFailureScriptOffset = 0x51b7;
-const expectedPlayerStateCastConditionBytes = Buffer.from("00010000002a0300000a00000015000000", "hex");
+const playerStateCastBranchOpcodeDataOffset = 0x1038b;
+const playerStateCastConditionDataOffset = 0x10390;
+const playerStateCastSuccessJumpOpcodeDataOffset = 0x103a1;
+const playerStateCastSuccessJumpTargetDataOffset = 0x103a2;
+const playerStateCastFailureScriptOffset = 0x4dda;
+const expectedPlayerStateCastConditionBytes = Buffer.from("0001000000330300000a00000016000000", "hex");
 
 
 function run(command, args, options = {}) {

@@ -58,6 +58,7 @@ const buyableRestrictedRows = [
 ];
 
 const expectedHeader = 0x2780;
+const propertyCount = 19;
 const trueBoolByte = Buffer.from([1]);
 const propertyIndexes = {
   canBeBought: 9,
@@ -75,10 +76,11 @@ const propertySizes = new Map([
   [10, 1],
   [11, 1],
   [12, 1],
-  [13, 4],
-  [14, 16],
-  [16, 8],
-  [17, 1],
+  [13, 1],
+  [14, 4],
+  [15, 16],
+  [17, 8],
+  [18, 1],
 ]);
 
 function cleanDir(dir) {
@@ -125,7 +127,7 @@ function parseRow(data, nameMap, rowName) {
   let cursor = headerOffset + 6;
   const properties = [];
 
-  for (let propertyIndex = 0; propertyIndex < 18; propertyIndex++) {
+  for (let propertyIndex = 0; propertyIndex < propertyCount; propertyIndex++) {
     const isZero = (zeroMask & (1 << propertyIndex)) !== 0;
     const property = { index: propertyIndex, isZero, offset: cursor };
     properties[propertyIndex] = property;
@@ -134,7 +136,7 @@ function parseRow(data, nameMap, rowName) {
 
     if (propertyIndex === 0 || propertyIndex === 1) {
       cursor = advanceTextProperty(data, cursor, rowName, propertyIndex);
-    } else if (propertyIndex === 15) {
+    } else if (propertyIndex === 16) {
       const itemCount = data.readInt32LE(cursor);
       property.itemCount = itemCount;
       cursor += 4 + itemCount * 8;

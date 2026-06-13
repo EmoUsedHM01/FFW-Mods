@@ -23,6 +23,8 @@ const toZenProbeRawDir = path.join(modRoot, "RawChunks", "tozen_probe_bullet_mec
 const pakListPath = path.join(scriptUtilsDir, "WeakspotEveryHit_BulletMechanical_PakList.txt");
 const buildBaseName = "pakchunk99-WeakspotEveryHit-BulletMechanicalProc-Windows_P";
 const buildBase = path.join(buildDir, buildBaseName);
+const releaseBaseName = "pakchunk99-AlwaysHitWeakpoints-Windows_P";
+const releaseBase = path.join(buildDir, releaseBaseName);
 const toZenProbeBase = path.join(buildDir, "pakchunk99-WeakspotEveryHit-BulletMechanicalProc-ToZenProbe-Windows_P");
 const ueVersion = "UE5_7";
 const exportIndex = "35";
@@ -56,7 +58,6 @@ const patches = [
     offset: 0x874,
     expectedName: "Critical",
     replacementName: "CallFunc_IsValid_ReturnValue",
-    suffix: Buffer.from("0000000056000000", "hex"),
   },
   {
     asset: "bullet",
@@ -65,7 +66,6 @@ const patches = [
     offset: 0x1095,
     expectedName: "isCritical",
     replacementName: "CallFunc_IsValid_ReturnValue",
-    suffix: Buffer.from("0000000008000000", "hex"),
   },
   {
     asset: "bullet",
@@ -74,7 +74,6 @@ const patches = [
     offset: 0x1ec7,
     expectedName: "isCritical",
     replacementName: "CallFunc_IsValid_ReturnValue",
-    suffix: Buffer.from("0000000008000000", "hex"),
   },
   {
     asset: "bullet",
@@ -83,7 +82,6 @@ const patches = [
     offset: 0x2249,
     expectedName: "isCritical",
     replacementName: "CallFunc_IsValid_ReturnValue",
-    suffix: Buffer.from("0000000008000000", "hex"),
   },
 ];
 
@@ -109,7 +107,7 @@ function cleanDir(dir) {
 
 function cleanBuildOutputs() {
   fs.mkdirSync(buildDir, { recursive: true });
-  for (const base of [buildBase, toZenProbeBase]) {
+  for (const base of [buildBase, releaseBase, toZenProbeBase]) {
     for (const ext of [".pak", ".ucas", ".utoc"]) {
       fs.rmSync(`${base}${ext}`, { force: true });
     }
@@ -123,25 +121,25 @@ function cleanProbeOutputs() {
   fs.rmSync(toZenProbeRawDir, { recursive: true, force: true });
 }
 
-function u32(value) {
-  const data = Buffer.alloc(4);
-  data.writeUInt32LE(value);
-  return data;
-}
-
-function nameRef(nameIndex, suffix) {
-  return Buffer.concat([Buffer.from("0001000000", "hex"), u32(nameIndex), suffix]);
-}
-
-function patchBytes(buffer, offset, expected, replacement, label) {
-  const found = buffer.subarray(offset, offset + expected.length);
-  if (!found.equals(expected)) {
+function patchNameReference(buffer, offset, expectedIndex, replacementIndex, label) {
+  const prefix = Buffer.from("0001000000", "hex");
+  const foundPrefix = buffer.subarray(offset, offset + prefix.length);
+  if (!foundPrefix.equals(prefix)) {
     throw new Error(
-      `${label}: expected ${expected.toString("hex")} at 0x${offset.toString(16)}, ` +
-        `found ${found.toString("hex")}`
+      `${label}: expected name ref prefix ${prefix.toString("hex")} at 0x${offset.toString(16)}, ` +
+        `found ${foundPrefix.toString("hex")}`
     );
   }
-  replacement.copy(buffer, offset);
+
+  const foundIndex = buffer.readUInt32LE(offset + prefix.length);
+  if (foundIndex !== expectedIndex) {
+    throw new Error(
+      `${label}: expected name index ${expectedIndex} at 0x${(offset + prefix.length).toString(16)}, ` +
+        `found ${foundIndex}`
+    );
+  }
+
+  buffer.writeUInt32LE(replacementIndex, offset + prefix.length);
 }
 
 function loadJsonExport(jsonPath, exportName) {
@@ -174,15 +172,17 @@ function patchJson(spec) {
     }
 
     const data = Buffer.from(currentExport.Data, "base64");
-    const expected = nameRef(nameIndex(asset, patch.expectedName, spec.sourceJson), patch.suffix);
-    const replacement = nameRef(nameIndex(asset, patch.replacementName, spec.sourceJson), patch.suffix);
+    const expectedIndex = nameIndex(asset, patch.expectedName, spec.sourceJson);
+    const replacementIndex = nameIndex(asset, patch.replacementName, spec.sourceJson);
 
-    patchBytes(data, patch.offset, expected, replacement, patch.name);
+    const before = data.subarray(patch.offset, patch.offset + 17).toString("hex");
+    patchNameReference(data, patch.offset, expectedIndex, replacementIndex, patch.name);
+    const after = data.subarray(patch.offset, patch.offset + 17).toString("hex");
     currentExport.Data = data.toString("base64");
     console.log(
       `${patch.name}: json 0x${patch.offset.toString(16)} ` +
         `${patch.expectedName}->${patch.replacementName} ` +
-        `(${expected.toString("hex")} -> ${replacement.toString("hex")})`
+        `(${before} -> ${after})`
     );
   }
 
@@ -228,6 +228,12 @@ function writePakList() {
   fs.writeFileSync(pakListPath, `${lines.join("\n")}\n`);
 }
 
+function writeReleaseCopies() {
+  for (const ext of [".pak", ".ucas", ".utoc"]) {
+    fs.copyFileSync(`${buildBase}${ext}`, `${releaseBase}${ext}`);
+  }
+}
+
 function main() {
   requireFile(tools.uassetgui);
   requireFile(tools.retoc);
@@ -269,11 +275,16 @@ function main() {
   for (const ext of [".pak", ".ucas", ".utoc"]) {
     requireFile(`${buildBase}${ext}`);
   }
+  writeReleaseCopies();
+  for (const ext of [".pak", ".ucas", ".utoc"]) {
+    requireFile(`${releaseBase}${ext}`);
+  }
 
   console.log("");
   console.log("AlwaysHitWeakpoint rebuilt with current BP_Enemy and BP_PlayerBullet assets.");
   console.log(`Raw override chunks: ${exportBundleChunkIds.join(", ")}`);
   console.log(`Output: ${buildBase}.pak/.ucas/.utoc`);
+  console.log(`Release copy: ${releaseBase}.pak/.ucas/.utoc`);
 }
 
 main();

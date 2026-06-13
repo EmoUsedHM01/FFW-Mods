@@ -1,6 +1,6 @@
 # All Spells
 
-Far Far West mod: sets every non-starting spell's `requiredMinimumLevel` to `1`, so all spells across Acid, Cactus, Electric, Fire, and Voodoo are available from the start.
+Far Far West mod: sets every serialized non-starting spell `requiredMinimumLevel` to `1`, so all spells across the current game archetypes are available from the start.
 
 ## Build
 
@@ -10,10 +10,10 @@ From this folder:
 node ScriptUtils\patch_all_spells.js
 ```
 
-The script exports current spell assets from
+The script discovers and exports current `BP_Item_SpellCast_*.uasset` files from
 `..\FarFarWest_Unpacked_RetocLegacy\FarFarWest\Content\Spells`, patches the
-required levels, stages the cooked assets, derives fresh raw override chunks
-with `retoc to-zen`, and writes the final pak/ucas/utoc triplet.
+serialized required levels, stages the cooked assets, derives fresh raw override
+chunks with `retoc to-zen`, and writes the final pak/ucas/utoc triplet.
 
 Install this triplet into `FarFarWest\Content\Paks\~mods`:
 
@@ -25,5 +25,7 @@ ModBuild/pakchunk99-AllSpells-Windows_P.utoc
 
 ## Notes
 
-Five spells already had level requirement `1` in the June 6, 2026 game files;
-the patch changes the other 20 spell assets.
+The June 13, 2026 game update contains 28 spell cast assets. The script patches
+the 20 assets that serialize level requirements above `1`; the five old starter
+spells are already level `1`, and the three Ice spells do not serialize a
+separate requirement value to patch.

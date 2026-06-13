@@ -105,6 +105,34 @@ function cStringEnd(buffer, offset) {
   return end + 1;
 }
 
+function lengthPrefixedStringEnd(buffer, offset) {
+  if (offset + 4 > buffer.length) return null;
+  const length = buffer.readInt32LE(offset);
+  if (length < 2 || length > 512 || offset + 4 + length > buffer.length) return null;
+
+  const textStart = offset + 4;
+  const textEnd = textStart + length;
+  if (buffer[textEnd - 1] !== 0) return null;
+
+  for (let index = textStart; index < textEnd - 1; index++) {
+    if (buffer[index] < 32 || buffer[index] > 126) return null;
+  }
+
+  return textEnd;
+}
+
+function advanceLiteralTextProperty(data, cursor, rowName, propertyIndex) {
+  for (let offset = cursor; offset <= cursor + 32; offset++) {
+    const firstEnd = lengthPrefixedStringEnd(data, offset);
+    if (!firstEnd) continue;
+
+    const secondEnd = lengthPrefixedStringEnd(data, firstEnd);
+    if (secondEnd) return secondEnd;
+  }
+
+  throw new Error(`${rowName}: literal text not found near property ${propertyIndex} at 0x${cursor.toString(16)}`);
+}
+
 function findMaxAvailableAfterSerializedText(data, row, nextOffset) {
   const candidates = [];
 
@@ -229,10 +257,11 @@ function findRowStart(data, nameMap, rowName) {
 function advanceTextProperty(data, cursor, rowName, propertyIndex) {
   const marker = Buffer.from("ST_UI_Tweaks_", "ascii");
   const markerOffset = data.indexOf(marker, cursor);
-  if (markerOffset < 0 || markerOffset - cursor > 32) {
-    throw new Error(`${rowName}: text marker not found near property ${propertyIndex} at 0x${cursor.toString(16)}`);
+  if (markerOffset >= 0 && markerOffset - cursor <= 32) {
+    return cStringEnd(data, markerOffset);
   }
-  return cStringEnd(data, markerOffset);
+
+  return advanceLiteralTextProperty(data, cursor, rowName, propertyIndex);
 }
 
 function parseRow(data, nameMap, rowName) {
@@ -319,11 +348,50 @@ function findPatch(data, nameMap, rowName, propertyNames) {
   };
 }
 
+function boolPropertyValue(data, parsedRow, propertyName) {
+  const property = parsedRow.properties[propertyIndexes[propertyName]];
+  return !property.isZero && data[property.offset] === 1;
+}
+
+function buildPatchTargets(data, nameMap) {
+  const targetsByRow = new Map();
+
+  function addTarget(rowName, propertyNames) {
+    const target = targetsByRow.get(rowName) ?? new Set();
+    for (const propertyName of propertyNames) target.add(propertyName);
+    targetsByRow.set(rowName, target);
+  }
+
+  for (const rowName of missionOnlyRows) {
+    addTarget(rowName, ["canBeBought", "canBeGambled"]);
+  }
+
+  for (const rowName of buyableRestrictedRows) {
+    addTarget(rowName, ["canBeGambled"]);
+  }
+
+  const dynamicRows = findAllJokerRows(data, nameMap).filter((row) => !row.rowName.startsWith("jokerUpgrade"));
+  let dynamicTargetCount = 0;
+  for (const row of dynamicRows) {
+    const parsedRow = parseRow(data, nameMap, row.rowName);
+    const canBeBought = boolPropertyValue(data, parsedRow, "canBeBought");
+    const canBeGambled = boolPropertyValue(data, parsedRow, "canBeGambled");
+    if (canBeBought && !canBeGambled) {
+      addTarget(row.rowName, ["canBeGambled"]);
+      dynamicTargetCount++;
+    }
+  }
+
+  const targets = [...targetsByRow.entries()].map(([rowName, propertyNames]) => ({
+    rowName,
+    propertyNames: [...propertyNames],
+  }));
+  console.log(`dynamic buyable-not-gambled targets ${dynamicTargetCount}`);
+  return targets;
+}
+
 function patchUnrestrictiveJokers(data, nameMap) {
-  const patchTargets = [
-    ...missionOnlyRows.map((rowName) => ({ rowName, propertyNames: ["canBeBought", "canBeGambled"] })),
-    ...buyableRestrictedRows.map((rowName) => ({ rowName, propertyNames: ["canBeGambled"] })),
-  ];
+  const patchTargets = buildPatchTargets(data, nameMap);
 
   const patches = patchTargets
     .map(({ rowName, propertyNames }) => findPatch(data, nameMap, rowName, propertyNames))

@@ -85,27 +85,47 @@ function formatStatus(result) {
   return `exit ${result.status}`;
 }
 
-function runToolWithGeneratedOutput(command, args, expectedFiles) {
-  const result = spawnSync(command, args, { stdio: "inherit" });
-  if (result.error) {
-    throw result.error;
-  }
-  if (result.status === 0) {
-    return;
-  }
+function sleep(milliseconds) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliseconds);
+}
 
-  const missingFiles = expectedFiles.filter((filePath) => {
+function missingGeneratedFiles(expectedFiles) {
+  return expectedFiles.filter((filePath) => {
     if (!fs.existsSync(filePath)) {
       return true;
     }
     return fs.statSync(filePath).size === 0;
   });
+}
 
-  if (missingFiles.length === 0) {
-    console.warn(`${path.basename(command)} returned ${formatStatus(result)} after writing output; continuing`);
-    return;
+function runToolWithGeneratedOutput(command, args, expectedFiles) {
+  let result = null;
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    result = spawnSync(command, args, { stdio: "inherit" });
+    if (result.error) {
+      throw result.error;
+    }
+
+    let missingFiles = missingGeneratedFiles(expectedFiles);
+    for (let waitAttempt = 0; waitAttempt < 50 && missingFiles.length > 0; waitAttempt++) {
+      sleep(100);
+      missingFiles = missingGeneratedFiles(expectedFiles);
+    }
+
+    if (missingFiles.length === 0) {
+      if (result.status !== 0) {
+        console.warn(`${path.basename(command)} returned ${formatStatus(result)} after writing output; continuing`);
+      }
+      return;
+    }
+
+    if (attempt < 3) {
+      console.warn(`${path.basename(command)} missing generated output after ${formatStatus(result)}; retry ${attempt + 1}/3`);
+    }
   }
 
+  const missingFiles = missingGeneratedFiles(expectedFiles);
   throw new Error(`${path.basename(command)} failed with ${formatStatus(result)}; missing ${missingFiles.join(", ")}`);
 }
 
@@ -331,7 +351,7 @@ function exportSourceJson(asset) {
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   if (!fs.existsSync(outputPath)) {
-    runTool(uassetGui, ["tojson", sourcePath, outputPath, "35"]);
+    runToolWithGeneratedOutput(uassetGui, ["tojson", sourcePath, outputPath, "35"], [outputPath]);
   }
   return outputPath;
 }

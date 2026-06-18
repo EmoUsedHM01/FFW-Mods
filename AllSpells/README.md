@@ -25,7 +25,7 @@ ModBuild/pakchunk99-AllSpells-Windows_P.utoc
 
 ## Notes
 
-The June 13, 2026 game update contains 28 spell cast assets. The script patches
+The June 18, 2026 game update contains 30 spell cast assets. The script patches
 the 20 assets that serialize level requirements above `1`; the five old starter
-spells are already level `1`, and the three Ice spells do not serialize a
+spells are already level `1`, and the five Ice spells do not serialize a
 separate requirement value to patch.

@@ -21,7 +21,7 @@ The original working mod made these three edits in `BP_Player.ExecuteUbergraph_B
 - `0xfb23`: redirected the player pawn causer branch from the damage path `0x5604` to the no-damage path `0x52ff`.
 - `0x100c4`: redirected the `BP_PlayerState` spell-causer branch from the damage path `0x5604` to the no-damage path `0x52ff`.
 
-The current June 13, 2026 game version has 222 `BP_Player` exports and remaps the edits to:
+The current June 18, 2026 game version keeps the June 13 friendly-fire bytecode layout: 222 `BP_Player` exports and these edits:
 
 - `0xfc15`: `Self` (`0x17`) to `NoObject` (`0x2a`)
 - `0xfc18`: `0x501c` to `0x4c94`
@@ -62,7 +62,7 @@ The final `.utoc` should list both:
 
 ## Locating The Player-Causer Patch
 
-The player-causer branch and self-spell operand are adjacent. In the June 13, 2026 build, the relevant unpatched bytecode looks like this around `0xfc05`:
+The player-causer branch and self-spell operand are adjacent. In the June 18, 2026 build, the relevant unpatched bytecode looks like this around `0xfc05`:
 
 ```text
 010000003f03000000000000160000001716071c5000000001000000b100000000000000160000001920
@@ -83,7 +83,7 @@ Read as:
 
 ## Locating The BP_PlayerState Spell-Causer Patch
 
-The `BP_PlayerState` spell-causer path is a success `Jump` after a `BP_PlayerState` cast check. In the June 13, 2026 build:
+The `BP_PlayerState` spell-causer path is a success `Jump` after a `BP_PlayerState` cast check. In the June 18, 2026 build:
 
 - `0x1038b`: `JumpIfNot` opcode for cast failure
 - `0x1038c`: cast failure target `0x4dda`
@@ -94,7 +94,7 @@ When remapping after another update, identify the matching branch structure and 
 
 ## Verification
 
-Current June 13, 2026 verification command from the repo root:
+Current June 18, 2026 verification command from the repo root:
 
 ```powershell
 node -e "const fs=require('fs'); const p='NoFriendlyFire/ScriptUtils/patched/BP_Player_35.json'; const j=JSON.parse(fs.readFileSync(p,'utf8')); const e=j.Exports.find(x=>x.ObjectName==='ExecuteUbergraph_BP_Player'); const b=Buffer.from(e.Data,'base64'); console.log('0xfc15=0x'+b[0xfc15].toString(16)); console.log('0xfc18=0x'+b.readUInt32LE(0xfc18).toString(16)); console.log('0x103a2=0x'+b.readUInt32LE(0x103a2).toString(16));"

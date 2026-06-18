@@ -22,20 +22,20 @@ const kismetInt5 = Buffer.from("1d05000000", "hex");
 const kismetInt17 = Buffer.from("1d11000000", "hex");
 const kismetInt3 = Buffer.from("1d03000000", "hex");
 const kismetInt15 = Buffer.from("1d0f000000", "hex");
-const kismetRocketSelectDefault2 = Buffer.from("000100000065010000020000000c000000", "hex");
-const kismetRocketTempInt11 = Buffer.from("0001000000cd0100000b0000000c000000", "hex");
-const kismetRocketSelectDefault0 = Buffer.from("000100000065010000000000000c000000", "hex");
-const kismetRocketTempInt5 = Buffer.from("0001000000cd010000050000000c000000", "hex");
-const kismetPumpkinSelectDefault2 = Buffer.from("0001000000be0000000200000004000000", "hex");
-const kismetPumpkinTempReal5 = Buffer.from("0001000000fb0000000500000004000000", "hex");
-const kismetKwartPillarSelectDefault = Buffer.from("0001000000c00000000000000009000000", "hex");
-const kismetKwartPillarTempInt2 = Buffer.from("0001000000fe0000000200000009000000", "hex");
-const kismetDrillGaugeSelectDefault = Buffer.from("0001000000e00000000000000016000000", "hex");
-const kismetDrillGaugeTempReal = Buffer.from("00010000002a0100000000000016000000", "hex");
-const kismetMemoryRecipeSelectDefaultInit = Buffer.from("0001000000ef0000000000000017000000", "hex");
-const kismetMemoryRecipeTempInt = Buffer.from("0001000000490100000000000017000000", "hex");
-const kismetMemoryRecipeSelectDefaultOnRep = Buffer.from("0001000000ef0000000000000037000000", "hex");
-const kismetMemoryRecipeTempReal = Buffer.from("00010000004b0100000000000037000000", "hex");
+const kismetRocketSelectDefault2 = Buffer.from("000100000069010000020000000c000000", "hex");
+const kismetRocketTempInt11 = Buffer.from("0001000000d20100000b0000000c000000", "hex");
+const kismetRocketSelectDefault0 = Buffer.from("000100000069010000000000000c000000", "hex");
+const kismetRocketTempInt5 = Buffer.from("0001000000d2010000050000000c000000", "hex");
+const kismetPumpkinSelectDefault2 = Buffer.from("0001000000c20000000200000004000000", "hex");
+const kismetPumpkinTempReal5 = Buffer.from("0001000000000100000500000004000000", "hex");
+const kismetKwartPillarSelectDefault = Buffer.from("0001000000c40000000000000009000000", "hex");
+const kismetKwartPillarTempInt2 = Buffer.from("0001000000030100000200000009000000", "hex");
+const kismetDrillGaugeSelectDefault = Buffer.from("0001000000e40000000000000017000000", "hex");
+const kismetDrillGaugeTempReal = Buffer.from("00010000002f0100000000000017000000", "hex");
+const kismetMemoryRecipeSelectDefaultInit = Buffer.from("0001000000f30000000000000018000000", "hex");
+const kismetMemoryRecipeTempInt = Buffer.from("00010000004e0100000000000018000000", "hex");
+const kismetMemoryRecipeSelectDefaultOnRep = Buffer.from("0001000000f30000000000000038000000", "hex");
+const kismetMemoryRecipeTempReal = Buffer.from("0001000000500100000000000038000000", "hex");
 
 const assets = [
   {
@@ -60,7 +60,7 @@ const assets = [
       patches: [
       {
         name: "public session browser full-check 4 -> 16",
-        jsonOffset: 0x3859,
+        jsonOffset: 0x37d5,
         expected: kismetInt4,
         replacement: kismetInt16,
       },
@@ -112,13 +112,13 @@ const assets = [
       patches: [
       {
         name: "Rocket Launch first player-count select default -> 4-player slot",
-        jsonOffset: 0x32c2,
+        jsonOffset: 0x3324,
         expected: kismetRocketSelectDefault2,
         replacement: kismetRocketTempInt11,
       },
       {
         name: "Rocket Launch second player-count select default -> 4-player slot",
-        jsonOffset: 0x3536,
+        jsonOffset: 0x3598,
         expected: kismetRocketSelectDefault0,
         replacement: kismetRocketTempInt5,
       },
@@ -135,7 +135,7 @@ const assets = [
       patches: [
       {
         name: "Cursed Pumpkin player-count select default -> 4-player slot",
-        jsonOffset: 0x189d,
+        jsonOffset: 0x18ff,
         expected: kismetPumpkinSelectDefault2,
         replacement: kismetPumpkinTempReal5,
       },

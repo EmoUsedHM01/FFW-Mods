@@ -276,15 +276,15 @@
   "Exports": [
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AQIGBwEJAAAABQAAAAMAAAAAAAAA6v///wIAAAAEAAAAAwAAAAEAAAAfAAAAAAAAACAAAAAAAAAAAQAgAAEAAAAQAAAAACAgAAAAAAAAABgAAAAAAAAAAGD///8AAAAAAAAAAAIAAAARAAAAAAAAAAMAAAAcAAAAAAAAAAQAAAAEAIQAs////w8AAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAABAAAAAgAAAAEAAAAFAAAAAAAAAA4AAABCUFRZUEVfTm9ybWFsAA==",
+      "Data": "AQIGBwEJAAAABQAAAAMAAAAAAAAA6v///wIAAAAEAAAAAwAAAAEAAAAfAAAAAAAAACAAAAAAAAAAAQAgAAEAAAAQAAAAACAgAAAAAAAAABgAAAAAAAAAAGH///8AAAAAAAAAAAIAAAARAAAAAAAAAAMAAAAcAAAAAAAAAAQAAAAEAIQAtP///w8AAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAABAAAAAgAAAAEAAAAFAAAAAAAAAA4AAABCUFRZUEVfTm9ybWFsAA==",
       "ObjectName": "BP_Event_Cryptic_WaitForTrain_C",
       "OuterIndex": 0,
-      "ClassIndex": -79,
+      "ClassIndex": -78,
       "SuperIndex": -22,
       "TemplateIndex": -27,
       "ObjectFlags": "RF_Public, RF_Transactional",
       "SerialSize": 202,
-      "SerialOffset": 13196,
+      "SerialOffset": 13164,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -298,7 +298,7 @@
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
         -22,
-        -46,
+        -45,
         3,
         5,
         9
@@ -307,7 +307,7 @@
         4
       ],
       "SerializationBeforeCreateDependencies": [
-        -79,
+        -78,
         -27
       ],
       "CreateBeforeCreateDependencies": [
@@ -317,15 +317,15 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAICDgEEjgQKAwIAAQYAAADz////8/////P////z////7f///+////97FK5H4XrEPwQAAADs////8v////j////4////zczMzMzM7D8CAAAA8f////b///8AAAAAAAAMQAEAAAD1////BAAAAPf////0////8P///+7///8AAIA/T////woAAAAAAAAA",
+      "Data": "AAICDgEEjgQKAwIAAQYAAADz////8/////P////z////7f///+////97FK5H4XrEPwQAAADs////8v////j////4////zczMzMzM7D8CAAAA8f////b///8AAAAAAAAMQAEAAAD1////BAAAAPf////0////8P///+7///8AAIA/UP///woAAAAAAAAA",
       "ObjectName": "Default__BP_Event_Cryptic_WaitForTrain_C",
       "OuterIndex": 0,
       "ClassIndex": 1,
       "SuperIndex": 0,
-      "TemplateIndex": -46,
+      "TemplateIndex": -45,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ClassDefaultObject, RF_ArchetypeObject",
       "SerialSize": 141,
-      "SerialOffset": 13398,
+      "SerialOffset": 13366,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -338,9 +338,9 @@
       "bIsAsset": false,
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
-        -153,
-        -191,
         -152,
+        -190,
+        -151,
         -6,
         6
       ],
@@ -358,26 +358,26 @@
         -12,
         -16,
         -18,
-        -177
+        -176
       ],
       "SerializationBeforeCreateDependencies": [
         1,
-        -46
+        -45
       ],
       "CreateBeforeCreateDependencies": [],
       "Extras": ""
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "BAEAAAAAAAAAAAAAAAAHAAAAFgAAAAAAAAAQAAAAAAAAAAEAAAABAAAABAAAAJQAAAAAAAAAAAAYAAAAAAAAAAAZAAAAAAAAAAkAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOb///8fAAAAAAAAAAwAAAAAAAAAAQAAAAEAAABgAAAAAAAAAAAAAAAAABgAAAAAAAAAAGL///8ZAAAAAAAAAAcAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAALL///8ZAAAAAAAAAAoAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOn///8ZAAAAAAAAAAgAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOf///8GAAAAAAAAAAsAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAABgAAAAAAAAAAAEAAf8BAdsCAAA3AwAATNgCAABOAAEAAAAQAAAAAAAAAAMAAAAZIM////8YAAAAAAAAAAAAAABFFAAAAAAAAAAXAAEAAAAIAAAAAAAAAAMAAAAWFAABAAAACwAAAAAAAAADAAAAaKL///8ZAAEAAAAIAAAAAAAAAAMAAAAJAAAAAQAAAB0AAAAAAAAA5////wEBAAAAHQAAAAAAAADn////FgfmAAAAAAEAAAALAAAAAAAAAAMAAAAZIM////8YAAAAAAAAAAAAAABFFAAAAAAAAAAXAAEAAAAIAAAAAAAAAAMAAAAWGRkAAQAAAAgAAAAAAAAAAwAAAAkAAAABAAAAHQAAAAAAAADn////AQEAAAAdAAAAAAAAAOf///8OAAAAAAAAAAAAAABFEwAAAAAAAAAWaKP///8XHgAAgD8vYf///yAAAABbHQEAAB2x3BNvIREAAAAAAAAAFzAWTRkgz////xgAAAAAAAAAAAAAAEUVAAAAAAAAABcAAQAAAAkAAAAAAAAAAwAAABYZAAEAAAAJAAAAAAAAAAMAAAAOAAAAAAAAAAAAAABFEgAAAAAAAAAWTQ8BAAAADAAAAAAAAAADAAAAAAEAAAAMAAAAAAAAAAMAAABopP///yMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPxZfAAEAAAAHAAAAAAAAAAMAAABopv///xcg6f///wABAAAADAAAAAAAAAADAAAAJAAqJAEWDwEAAAAMAAAAAAAAAAMAAAAAAQAAAAwAAAAAAAAAAwAAAGik////IwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/Fl8AAQAAAAoAAAAAAAAAAwAAAGil////AAEAAAAHAAAAAAAAAAMAAAAAAQAAAAwAAAAAAAAAAwAAACQBFmij////Fx4AAJBBL2H///8gAAAAWw8AAAAdnRULgyERAAAAAAAAABcwFk1GqP///xYGcAEAAAQLUwGAgAAAAAAAAAAAAA==",
+      "Data": "BAEAAAAAAAAAAAAAAAAHAAAAFgAAAAAAAAAQAAAAAAAAAAEAAAABAAAABAAAAJQAAAAAAAAAAAAYAAAAAAAAAAAZAAAAAAAAAAkAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOb///8fAAAAAAAAAAwAAAAAAAAAAQAAAAEAAABgAAAAAAAAAAAAAAAAABgAAAAAAAAAAGP///8ZAAAAAAAAAAcAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAALP///8ZAAAAAAAAAAoAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOn///8ZAAAAAAAAAAgAAAAAAAAAAQAAAAEAAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAAOf///8GAAAAAAAAAAsAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAABgAAAAAAAAAAAEAAf8BAdsCAAA3AwAATNgCAABOAAEAAAAQAAAAAAAAAAMAAAAZIND///8YAAAAAAAAAAAAAABFFAAAAAAAAAAXAAEAAAAIAAAAAAAAAAMAAAAWFAABAAAACwAAAAAAAAADAAAAaKP///8ZAAEAAAAIAAAAAAAAAAMAAAAJAAAAAQAAAB0AAAAAAAAA5////wEBAAAAHQAAAAAAAADn////FgfmAAAAAAEAAAALAAAAAAAAAAMAAAAZIND///8YAAAAAAAAAAAAAABFFAAAAAAAAAAXAAEAAAAIAAAAAAAAAAMAAAAWGRkAAQAAAAgAAAAAAAAAAwAAAAkAAAABAAAAHQAAAAAAAADn////AQEAAAAdAAAAAAAAAOf///8OAAAAAAAAAAAAAABFEwAAAAAAAAAWaKT///8XHgAAgD8vYv///yAAAABbHQEAAB2x3BNvIREAAAAAAAAAFzAWTRkg0P///xgAAAAAAAAAAAAAAEUVAAAAAAAAABcAAQAAAAkAAAAAAAAAAwAAABYZAAEAAAAJAAAAAAAAAAMAAAAOAAAAAAAAAAAAAABFEgAAAAAAAAAWTQ8BAAAADAAAAAAAAAADAAAAAAEAAAAMAAAAAAAAAAMAAABopf///yMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPxZfAAEAAAAHAAAAAAAAAAMAAABop////xcg6f///wABAAAADAAAAAAAAAADAAAAJAAqJAEWDwEAAAAMAAAAAAAAAAMAAAAAAQAAAAwAAAAAAAAAAwAAAGil////IwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/Fl8AAQAAAAoAAAAAAAAAAwAAAGim////AAEAAAAHAAAAAAAAAAMAAAAAAQAAAAwAAAAAAAAAAwAAACQBFmik////Fx4AAJBBL2L///8gAAAAWw8AAAAdnRULgyERAAAAAAAAABcwFk1Gqf///xYGcAEAAAQLUwGAgAAAAAAAAAAAAA==",
       "ObjectName": "ExecuteUbergraph_BP_Event_Cryptic_WaitForTrain",
       "OuterIndex": 1,
-      "ClassIndex": -76,
+      "ClassIndex": -75,
       "SuperIndex": 0,
-      "TemplateIndex": -89,
+      "TemplateIndex": -88,
       "ObjectFlags": "RF_Public",
       "SerialSize": 1216,
-      "SerialOffset": 13539,
+      "SerialOffset": 13507,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -395,12 +395,12 @@
         -23,
         -25,
         3,
-        -49,
-        -88
+        -48,
+        -87
       ],
       "SerializationBeforeCreateDependencies": [
-        -76,
-        -89
+        -75,
+        -88
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -409,15 +409,15 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "BAEAAAAAqP///wAAAAAAAAAAEgAAAA4AAABGAwAAAB3JAgAAFgQLUwAICAgAAAAAAAAAAA==",
+      "Data": "BAEAAAAAqf///wAAAAAAAAAAEgAAAA4AAABGAwAAAB3JAgAAFgQLUwAICAgAAAAAAAAAAA==",
       "ObjectName": "ReceiveBeginPlay",
       "OuterIndex": 1,
-      "ClassIndex": -76,
-      "SuperIndex": -88,
-      "TemplateIndex": -89,
+      "ClassIndex": -75,
+      "SuperIndex": -87,
+      "TemplateIndex": -88,
       "ObjectFlags": "RF_Public",
       "SerialSize": 52,
-      "SerialOffset": 14755,
+      "SerialOffset": 14723,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -430,32 +430,32 @@
       "bIsAsset": false,
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
-        -88
+        -87
       ],
       "CreateBeforeSerializationDependencies": [
         3
       ],
       "SerializationBeforeCreateDependencies": [
-        -76,
-        -89
+        -75,
+        -88
       ],
       "CreateBeforeCreateDependencies": [
         1,
-        -88
+        -87
       ],
       "Extras": ""
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAMBAAAAAAmp////BgAAAAAH6////xcAAAAAAAAAZGdEVV7Ft0S8D5N4Mbo2GgAFCgAAAIAHAgIAAAAAAAAAqf///4AHAhoAAAAAAAAAqf///4AHAiEAAAAAAAAAX////4AHAh4AAAAAAAAAX////4AHA1////+ABwIbAAAAAAAAAF////+ABwNf////gAcCDQAAAAAAAACp////gAcCAwAAAAAAAACp////gAcCBAAAAAAAAACp////AQAAAAA=",
+      "Data": "AAMBAAAAAAmq////BgAAAAAH6////xcAAAAAAAAAZGdEVV7Ft0S8D5N4Mbo2GgAFCgAAAIAHAgIAAAAAAAAAqv///4AHAhoAAAAAAAAAqv///4AHAiEAAAAAAAAAYP///4AHAh4AAAAAAAAAYP///4AHA2D///+ABwIbAAAAAAAAAGD///+ABwNg////gAcCDQAAAAAAAACq////gAcCAwAAAAAAAACq////gAcCBAAAAAAAAACq////AQAAAAA=",
       "ObjectName": "InheritableComponentHandler",
       "OuterIndex": 1,
-      "ClassIndex": -81,
+      "ClassIndex": -80,
       "SuperIndex": 0,
-      "TemplateIndex": -95,
+      "TemplateIndex": -94,
       "ObjectFlags": "RF_NoFlags",
       "SerialSize": 191,
-      "SerialOffset": 14807,
+      "SerialOffset": 14775,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -473,8 +473,8 @@
         -21
       ],
       "SerializationBeforeCreateDependencies": [
-        -81,
-        -95
+        -80,
+        -94
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -486,12 +486,12 @@
       "Data": "AwMHAQAAAAAAAAAA",
       "ObjectName": "Niagara_GEN_VARIABLE",
       "OuterIndex": 1,
-      "ClassIndex": -87,
+      "ClassIndex": -86,
       "SuperIndex": 0,
-      "TemplateIndex": -102,
+      "TemplateIndex": -101,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject, RF_InheritableComponentTemplate",
       "SerialSize": 12,
-      "SerialOffset": 14998,
+      "SerialOffset": 14966,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -508,8 +508,8 @@
       ],
       "CreateBeforeSerializationDependencies": [],
       "SerializationBeforeCreateDependencies": [
-        -102,
-        -87
+        -101,
+        -86
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -521,12 +521,12 @@
       "Data": "LAEAAAAAAAAAAA==",
       "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
       "OuterIndex": 1,
-      "ClassIndex": -84,
+      "ClassIndex": -83,
       "SuperIndex": 0,
-      "TemplateIndex": -157,
+      "TemplateIndex": -156,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject",
       "SerialSize": 10,
-      "SerialOffset": 15010,
+      "SerialOffset": 14978,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -543,8 +543,8 @@
       ],
       "CreateBeforeSerializationDependencies": [],
       "SerializationBeforeCreateDependencies": [
-        -84,
-        -157
+        -83,
+        -156
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -553,15 +553,15 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAQHBaz///8HAAAAfHRdKepeiUGztS1AgrQrTA4AAAAAAAAAAAAAAA==",
+      "Data": "AAQHBa3///8HAAAAfHRdKepeiUGztS1AgrQrTA4AAAAAAAAAAAAAAA==",
       "ObjectName": "SCS_Node_0",
       "OuterIndex": 9,
-      "ClassIndex": -85,
+      "ClassIndex": -84,
       "SuperIndex": 0,
-      "TemplateIndex": -162,
+      "TemplateIndex": -161,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 40,
-      "SerialOffset": 15020,
+      "SerialOffset": 14988,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -578,8 +578,8 @@
         7
       ],
       "SerializationBeforeCreateDependencies": [
-        -85,
-        -162
+        -84,
+        -161
       ],
       "CreateBeforeCreateDependencies": [
         9
@@ -591,12 +591,12 @@
       "Data": "AgMIAAAAAAAAAA==",
       "ObjectName": "SimpleConstructionScript_0",
       "OuterIndex": 1,
-      "ClassIndex": -86,
+      "ClassIndex": -85,
       "SuperIndex": 0,
-      "TemplateIndex": -163,
+      "TemplateIndex": -162,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 10,
-      "SerialOffset": 15060,
+      "SerialOffset": 15028,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -613,8 +613,8 @@
         8
       ],
       "SerializationBeforeCreateDependencies": [
-        -86,
-        -163
+        -85,
+        -162
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -692,132 +692,6 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "AC_Enemy_Optimizer_C",
-      "OuterIndex": -110,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Assassin_C",
-      "OuterIndex": -111,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Assassin_Elite_C",
-      "OuterIndex": -112,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Buffalo_C",
-      "OuterIndex": -108,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_DeadEye_C",
-      "OuterIndex": -104,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Grenadier_Elite_C",
-      "OuterIndex": -113,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Grunt_C",
-      "OuterIndex": -114,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Gunner_C",
-      "OuterIndex": -115,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Lich_C",
-      "OuterIndex": -105,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Lich_Elite_C",
-      "OuterIndex": -116,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Revolver_C",
-      "OuterIndex": -106,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Revolver_Elite_C",
-      "OuterIndex": -117,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_S_Raven_C",
-      "OuterIndex": -107,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Enemy_Cryptic_Shield_C",
-      "OuterIndex": -118,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BlueprintGeneratedClass",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "BP_Event_C",
       "OuterIndex": -109,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
@@ -826,8 +700,134 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Assassin_C",
+      "OuterIndex": -110,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Assassin_Elite_C",
+      "OuterIndex": -111,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Buffalo_C",
+      "OuterIndex": -107,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_DeadEye_C",
+      "OuterIndex": -103,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Grenadier_Elite_C",
+      "OuterIndex": -112,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Grunt_C",
+      "OuterIndex": -113,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Gunner_C",
+      "OuterIndex": -114,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Lich_C",
+      "OuterIndex": -104,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Lich_Elite_C",
+      "OuterIndex": -115,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Revolver_C",
+      "OuterIndex": -105,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Revolver_Elite_C",
+      "OuterIndex": -116,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_S_Raven_C",
+      "OuterIndex": -106,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Enemy_Cryptic_Shield_C",
+      "OuterIndex": -117,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "BP_Event_C",
+      "OuterIndex": -108,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "BlueprintGeneratedClass",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Event_Storm_C",
-      "OuterIndex": -119,
+      "OuterIndex": -118,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -836,7 +836,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Lightning_C",
-      "OuterIndex": -120,
+      "OuterIndex": -119,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -845,7 +845,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BPFL_FunctionLibrary_C",
-      "OuterIndex": -121,
+      "OuterIndex": -120,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -854,7 +854,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_CanyonGameInstance_C",
-      "OuterIndex": -122,
+      "OuterIndex": -121,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -863,7 +863,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_GameState_C",
-      "OuterIndex": -123,
+      "OuterIndex": -122,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -872,7 +872,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BlueprintGeneratedClass",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -907,17 +907,8 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "Box_GEN_VARIABLE",
-      "OuterIndex": -20,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BoxComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_CanyonGameInstance_C",
-      "OuterIndex": -122,
+      "OuterIndex": -121,
       "ClassPackage": "/Game/Player/BP_CanyonGameInstance",
       "ClassName": "BP_CanyonGameInstance_C",
       "PackageName": null,
@@ -926,7 +917,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Assassin_C",
-      "OuterIndex": -111,
+      "OuterIndex": -110,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Assassin",
       "ClassName": "BP_Enemy_Cryptic_Assassin_C",
       "PackageName": null,
@@ -935,7 +926,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Assassin_Elite_C",
-      "OuterIndex": -112,
+      "OuterIndex": -111,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Assassin_Elite",
       "ClassName": "BP_Enemy_Cryptic_Assassin_Elite_C",
       "PackageName": null,
@@ -944,7 +935,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Buffalo_C",
-      "OuterIndex": -108,
+      "OuterIndex": -107,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Buffalo",
       "ClassName": "BP_Enemy_Cryptic_Buffalo_C",
       "PackageName": null,
@@ -953,7 +944,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_DeadEye_C",
-      "OuterIndex": -104,
+      "OuterIndex": -103,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_DeadEye",
       "ClassName": "BP_Enemy_Cryptic_DeadEye_C",
       "PackageName": null,
@@ -962,7 +953,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Grenadier_Elite_C",
-      "OuterIndex": -113,
+      "OuterIndex": -112,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Grenadier_Elite",
       "ClassName": "BP_Enemy_Cryptic_Grenadier_Elite_C",
       "PackageName": null,
@@ -971,7 +962,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Grunt_C",
-      "OuterIndex": -114,
+      "OuterIndex": -113,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Grunt",
       "ClassName": "BP_Enemy_Cryptic_Grunt_C",
       "PackageName": null,
@@ -980,7 +971,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Gunner_C",
-      "OuterIndex": -115,
+      "OuterIndex": -114,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Gunner",
       "ClassName": "BP_Enemy_Cryptic_Gunner_C",
       "PackageName": null,
@@ -989,7 +980,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Lich_C",
-      "OuterIndex": -105,
+      "OuterIndex": -104,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Lich",
       "ClassName": "BP_Enemy_Cryptic_Lich_C",
       "PackageName": null,
@@ -998,7 +989,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Lich_Elite_C",
-      "OuterIndex": -116,
+      "OuterIndex": -115,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Lich_Elite",
       "ClassName": "BP_Enemy_Cryptic_Lich_Elite_C",
       "PackageName": null,
@@ -1007,7 +998,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Revolver_C",
-      "OuterIndex": -106,
+      "OuterIndex": -105,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Revolver",
       "ClassName": "BP_Enemy_Cryptic_Revolver_C",
       "PackageName": null,
@@ -1016,7 +1007,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Revolver_Elite_C",
-      "OuterIndex": -117,
+      "OuterIndex": -116,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Revolver_Elite",
       "ClassName": "BP_Enemy_Cryptic_Revolver_Elite_C",
       "PackageName": null,
@@ -1025,7 +1016,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_S_Raven_C",
-      "OuterIndex": -107,
+      "OuterIndex": -106,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_S_Raven",
       "ClassName": "BP_Enemy_Cryptic_S_Raven_C",
       "PackageName": null,
@@ -1034,7 +1025,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Shield_C",
-      "OuterIndex": -118,
+      "OuterIndex": -117,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Shield",
       "ClassName": "BP_Enemy_Cryptic_Shield_C",
       "PackageName": null,
@@ -1043,7 +1034,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Event_Storm_C",
-      "OuterIndex": -119,
+      "OuterIndex": -118,
       "ClassPackage": "/Game/Events/BP_Event_Storm",
       "ClassName": "BP_Event_Storm_C",
       "PackageName": null,
@@ -1052,7 +1043,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_GameState_C",
-      "OuterIndex": -123,
+      "OuterIndex": -122,
       "ClassPackage": "/Game/Player/BP_GameState",
       "ClassName": "BP_GameState_C",
       "PackageName": null,
@@ -1061,7 +1052,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Lightning_C",
-      "OuterIndex": -120,
+      "OuterIndex": -119,
       "ClassPackage": "/Game/FX/BP_Lightning",
       "ClassName": "BP_Lightning_C",
       "PackageName": null,
@@ -1070,7 +1061,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BPFL_FunctionLibrary_C",
-      "OuterIndex": -121,
+      "OuterIndex": -120,
       "ClassPackage": "/Game/Gamework/BPFL_FunctionLibrary",
       "ClassName": "BPFL_FunctionLibrary_C",
       "PackageName": null,
@@ -1079,6 +1070,15 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "CollisionCylinder",
+      "OuterIndex": -32,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "CapsuleComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CollisionCylinder",
       "OuterIndex": -33,
       "ClassPackage": "/Script/Engine",
       "ClassName": "CapsuleComponent",
@@ -1186,10 +1186,10 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CollisionCylinder",
-      "OuterIndex": -45,
+      "ObjectName": "CharMoveComp",
+      "OuterIndex": -32,
       "ClassPackage": "/Script/Engine",
-      "ClassName": "CapsuleComponent",
+      "ClassName": "CharacterMovementComponent",
       "PackageName": null,
       "bImportOptional": false
     },
@@ -1296,15 +1296,6 @@
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "CharMoveComp",
       "OuterIndex": -44,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "CharacterMovementComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CharMoveComp",
-      "OuterIndex": -45,
       "ClassPackage": "/Script/Engine",
       "ClassName": "CharacterMovementComponent",
       "PackageName": null,
@@ -1313,7 +1304,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Function",
-      "OuterIndex": -125,
+      "OuterIndex": -124,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1322,7 +1313,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Object",
-      "OuterIndex": -125,
+      "OuterIndex": -124,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1331,7 +1322,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Actor",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1340,7 +1331,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BlueprintGeneratedClass",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1349,7 +1340,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "GameplayStatics",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1358,7 +1349,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "InheritableComponentHandler",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1367,7 +1358,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "KismetMathLibrary",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1376,7 +1367,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "KismetSystemLibrary",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1385,7 +1376,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SceneComponent",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1394,7 +1385,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SCS_Node",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1403,7 +1394,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SimpleConstructionScript",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1412,7 +1403,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "NiagaraComponent",
-      "OuterIndex": -127,
+      "OuterIndex": -126,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -1430,7 +1421,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__Function",
-      "OuterIndex": -125,
+      "OuterIndex": -124,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Function",
       "PackageName": null,
@@ -1439,7 +1430,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BeginDeferredActorSpawnFromClass",
-      "OuterIndex": -80,
+      "OuterIndex": -79,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -1448,7 +1439,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "FinishSpawningActor",
-      "OuterIndex": -80,
+      "OuterIndex": -79,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -1457,7 +1448,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "MakeTransform",
-      "OuterIndex": -82,
+      "OuterIndex": -81,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -1466,7 +1457,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Delay",
-      "OuterIndex": -83,
+      "OuterIndex": -82,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -1475,7 +1466,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "IsValid",
-      "OuterIndex": -83,
+      "OuterIndex": -82,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -1484,7 +1475,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__InheritableComponentHandler",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/Engine",
       "ClassName": "InheritableComponentHandler",
       "PackageName": null,
@@ -2042,7 +2033,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SceneComponent",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SceneComponent",
       "PackageName": null,
@@ -2051,7 +2042,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Transform",
-      "OuterIndex": -125,
+      "OuterIndex": -124,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -2060,7 +2051,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "LatentActionInfo",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -2069,7 +2060,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "PointerToUberGraphFrame",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -2078,7 +2069,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "NiagaraUserRedirectionParameterStore",
-      "OuterIndex": -127,
+      "OuterIndex": -126,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Object",
       "PackageName": null,
@@ -2087,7 +2078,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SCS_Node",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SCS_Node",
       "PackageName": null,
@@ -2096,9 +2087,18 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SimpleConstructionScript",
-      "OuterIndex": -126,
+      "OuterIndex": -125,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SimpleConstructionScript",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CharacterMesh0",
+      "OuterIndex": -32,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SkeletalMeshComponent",
       "PackageName": null,
       "bImportOptional": false
     },
@@ -2212,17 +2212,8 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CharacterMesh0",
-      "OuterIndex": -45,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "SkeletalMeshComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "M_Storm_End",
-      "OuterIndex": -124,
+      "OuterIndex": -123,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SoundWave",
       "PackageName": null,

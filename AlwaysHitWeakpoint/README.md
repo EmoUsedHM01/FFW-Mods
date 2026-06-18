@@ -54,22 +54,22 @@ The script exports current assets from `../FarFarWest_Unpacked_RetocLegacy`, pat
 BP_Enemy.F_ShowDamagesAmount
   json 0x874
   Critical -> CallFunc_IsValid_ReturnValue
-  00010000000f0100000000000057000000 -> 0001000000ad0000000000000057000000
+  0001000000110100000000000057000000 -> 0001000000ad0000000000000057000000
 
 BP_PlayerBullet.F_ApplyDamages
   json 0x1095
   output Critical source: isCritical -> CallFunc_IsValid_ReturnValue
-  0001000000100100000000000008000000 -> 0001000000670000000000000008000000
+  0001000000120100000000000008000000 -> 0001000000670000000000000008000000
 
 BP_PlayerBullet.F_ApplyDamages
   json 0x1ec7
   F_HitMarkerRequest Critical param: isCritical -> CallFunc_IsValid_ReturnValue
-  0001000000100100000000000008000000 -> 0001000000670000000000000008000000
+  0001000000120100000000000008000000 -> 0001000000670000000000000008000000
 
 BP_PlayerBullet.F_ApplyDamages
   json 0x2249
   F_ApplyImpactDamages Critical param: isCritical -> CallFunc_IsValid_ReturnValue
-  0001000000100100000000000008000000 -> 0001000000670000000000000008000000
+  0001000000120100000000000008000000 -> 0001000000670000000000000008000000
 ```
 
 Raw offsets and trailing ref bytes are no longer hard-coded. The rebuild derives the current Zen chunks with `retoc to-zen` and copies the resulting `ExportBundleData` chunks into `RawChunks/raw_mod_bullet_mechanical`.

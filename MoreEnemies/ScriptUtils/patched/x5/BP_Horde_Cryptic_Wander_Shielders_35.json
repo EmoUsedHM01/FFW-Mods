@@ -34,8 +34,6 @@
     "BP_Enemy_Cryptic_Snake_C",
     "BP_Horde_C",
     "Default__BlueprintGeneratedClass",
-    "BoxComponent",
-    "Box_GEN_VARIABLE",
     "Default__BP_Enemy_Cryptic_Grenadier_C",
     "Default__BP_Enemy_Cryptic_Grunt_C",
     "Default__BP_Enemy_Cryptic_Revolver_C",
@@ -173,15 +171,15 @@
   "Exports": [
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AQIGBQEHAAAAAwAAAAAAAAD3////AAAAAAAAAAAAAAAAAAAAAAAAAAAEAIQA5P///wMAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAABAAAAAgAAAAEAAAABAAAAAAAAAA4AAABCUFRZUEVfTm9ybWFsAA==",
+      "Data": "AQIGBQEHAAAAAwAAAAAAAAD3////AAAAAAAAAAAAAAAAAAAAAAAAAAAEAIQA5f///wMAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAABAAAAAgAAAAEAAAABAAAAAAAAAA4AAABCUFRZUEVfTm9ybWFsAA==",
       "ObjectName": "BP_Horde_Cryptic_Wander_Shielders_C",
       "OuterIndex": 0,
-      "ClassIndex": -29,
+      "ClassIndex": -28,
       "SuperIndex": -9,
       "TemplateIndex": -10,
       "ObjectFlags": "RF_Public, RF_Transactional",
       "SerialSize": 115,
-      "SerialOffset": 5210,
+      "SerialOffset": 5132,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -195,13 +193,13 @@
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
         -9,
-        -17,
+        -16,
         3,
         7
       ],
       "CreateBeforeSerializationDependencies": [],
       "SerializationBeforeCreateDependencies": [
-        -29,
+        -28,
         -10
       ],
       "CreateBeforeCreateDependencies": [
@@ -216,10 +214,10 @@
       "OuterIndex": 0,
       "ClassIndex": 1,
       "SuperIndex": 0,
-      "TemplateIndex": -17,
+      "TemplateIndex": -16,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ClassDefaultObject, RF_ArchetypeObject",
       "SerialSize": 98,
-      "SerialOffset": 5325,
+      "SerialOffset": 5247,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -233,7 +231,7 @@
       "GeneratePublicHash": false,
       "SerializationBeforeSerializationDependencies": [
         5,
-        -64
+        -63
       ],
       "CreateBeforeSerializationDependencies": [
         -5,
@@ -244,22 +242,22 @@
       ],
       "SerializationBeforeCreateDependencies": [
         1,
-        -17
+        -16
       ],
       "CreateBeforeCreateDependencies": [],
       "Extras": ""
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAMBAAAAAAnh////BQAAAAAH9////wIAAAAAAAAA7t0Q0Rjcw0uyqLsy7gsiQwAFAAAAAAEAAAAA",
+      "Data": "AAMBAAAAAAni////BQAAAAAH9////wIAAAAAAAAA7t0Q0Rjcw0uyqLsy7gsiQwAFAAAAAAEAAAAA",
       "ObjectName": "InheritableComponentHandler",
       "OuterIndex": 1,
-      "ClassIndex": -30,
+      "ClassIndex": -29,
       "SuperIndex": 0,
-      "TemplateIndex": -34,
+      "TemplateIndex": -33,
       "ObjectFlags": "RF_NoFlags",
       "SerialSize": 57,
-      "SerialOffset": 5423,
+      "SerialOffset": 5345,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -277,8 +275,8 @@
         -9
       ],
       "SerializationBeforeCreateDependencies": [
-        -30,
-        -34
+        -29,
+        -33
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -290,12 +288,12 @@
       "Data": "LAEAAAAAAAAAAA==",
       "ObjectName": "DefaultSceneRoot_GEN_VARIABLE",
       "OuterIndex": 1,
-      "ClassIndex": -31,
+      "ClassIndex": -30,
       "SuperIndex": 0,
-      "TemplateIndex": -51,
+      "TemplateIndex": -50,
       "ObjectFlags": "RF_Public, RF_Transactional, RF_ArchetypeObject",
       "SerialSize": 10,
-      "SerialOffset": 5480,
+      "SerialOffset": 5402,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -312,8 +310,8 @@
       ],
       "CreateBeforeSerializationDependencies": [],
       "SerializationBeforeCreateDependencies": [
-        -31,
-        -51
+        -30,
+        -50
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -325,12 +323,12 @@
       "Data": "LAEAAAAAAAAAAA==",
       "ObjectName": "ICH-DefaultSceneRoot_GEN_VARIABLE",
       "OuterIndex": 1,
-      "ClassIndex": -31,
+      "ClassIndex": -30,
       "SuperIndex": 0,
-      "TemplateIndex": -51,
+      "TemplateIndex": -50,
       "ObjectFlags": "RF_Public, RF_ArchetypeObject, RF_InheritableComponentTemplate",
       "SerialSize": 10,
-      "SerialOffset": 5490,
+      "SerialOffset": 5412,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -347,8 +345,8 @@
       ],
       "CreateBeforeSerializationDependencies": [],
       "SerializationBeforeCreateDependencies": [
-        -31,
-        -51
+        -30,
+        -50
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -357,15 +355,15 @@
     },
     {
       "$type": "UAssetAPI.ExportTypes.RawExport, UAssetAPI",
-      "Data": "AAQHBeH///8EAAAAH12VfR/88UuL8t5LBARuBgIAAAAAAAAAAAAAAA==",
+      "Data": "AAQHBeL///8EAAAAH12VfR/88UuL8t5LBARuBgIAAAAAAAAAAAAAAA==",
       "ObjectName": "SCS_Node_0",
       "OuterIndex": 7,
-      "ClassIndex": -32,
+      "ClassIndex": -31,
       "SuperIndex": 0,
-      "TemplateIndex": -52,
+      "TemplateIndex": -51,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 40,
-      "SerialOffset": 5500,
+      "SerialOffset": 5422,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -382,8 +380,8 @@
         4
       ],
       "SerializationBeforeCreateDependencies": [
-        -32,
-        -52
+        -31,
+        -51
       ],
       "CreateBeforeCreateDependencies": [
         7
@@ -395,12 +393,12 @@
       "Data": "AgMGAAAAAAAAAA==",
       "ObjectName": "SimpleConstructionScript_0",
       "OuterIndex": 1,
-      "ClassIndex": -33,
+      "ClassIndex": -32,
       "SuperIndex": 0,
-      "TemplateIndex": -53,
+      "TemplateIndex": -52,
       "ObjectFlags": "RF_Transactional",
       "SerialSize": 10,
-      "SerialOffset": 5540,
+      "SerialOffset": 5462,
       "ScriptSerializationStartOffset": 0,
       "ScriptSerializationEndOffset": 0,
       "bForcedExport": false,
@@ -417,8 +415,8 @@
         6
       ],
       "SerializationBeforeCreateDependencies": [
-        -33,
-        -53
+        -32,
+        -52
       ],
       "CreateBeforeCreateDependencies": [
         1
@@ -460,7 +458,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "AC_Enemy_Optimizer_C",
-      "OuterIndex": -37,
+      "OuterIndex": -36,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -469,7 +467,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Enemy_Cryptic_Grenadier_C",
-      "OuterIndex": -35,
+      "OuterIndex": -34,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -478,7 +476,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Enemy_Cryptic_Grunt_C",
-      "OuterIndex": -38,
+      "OuterIndex": -37,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -487,7 +485,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Enemy_Cryptic_Revolver_C",
-      "OuterIndex": -36,
+      "OuterIndex": -35,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -496,7 +494,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Enemy_Cryptic_Shield_C",
-      "OuterIndex": -39,
+      "OuterIndex": -38,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -505,7 +503,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Enemy_Cryptic_Snake_C",
-      "OuterIndex": -40,
+      "OuterIndex": -39,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -514,7 +512,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BP_Horde_C",
-      "OuterIndex": -41,
+      "OuterIndex": -40,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -523,7 +521,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BlueprintGeneratedClass",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/Engine",
       "ClassName": "BlueprintGeneratedClass",
       "PackageName": null,
@@ -531,17 +529,8 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "Box_GEN_VARIABLE",
-      "OuterIndex": -7,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "BoxComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Grenadier_C",
-      "OuterIndex": -35,
+      "OuterIndex": -34,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Grenadier",
       "ClassName": "BP_Enemy_Cryptic_Grenadier_C",
       "PackageName": null,
@@ -550,7 +539,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Grunt_C",
-      "OuterIndex": -38,
+      "OuterIndex": -37,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Grunt",
       "ClassName": "BP_Enemy_Cryptic_Grunt_C",
       "PackageName": null,
@@ -559,7 +548,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Revolver_C",
-      "OuterIndex": -36,
+      "OuterIndex": -35,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Revolver",
       "ClassName": "BP_Enemy_Cryptic_Revolver_C",
       "PackageName": null,
@@ -568,7 +557,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Shield_C",
-      "OuterIndex": -39,
+      "OuterIndex": -38,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Shield",
       "ClassName": "BP_Enemy_Cryptic_Shield_C",
       "PackageName": null,
@@ -577,7 +566,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Enemy_Cryptic_Snake_C",
-      "OuterIndex": -40,
+      "OuterIndex": -39,
       "ClassPackage": "/Game/Enemies/BP_Enemy_Cryptic_Snake",
       "ClassName": "BP_Enemy_Cryptic_Snake_C",
       "PackageName": null,
@@ -586,7 +575,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__BP_Horde_C",
-      "OuterIndex": -41,
+      "OuterIndex": -40,
       "ClassPackage": "/Game/Enemies/Hordes/BP_Horde",
       "ClassName": "BP_Horde_C",
       "PackageName": null,
@@ -595,6 +584,15 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "CollisionCylinder",
+      "OuterIndex": -11,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "CapsuleComponent",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CollisionCylinder",
       "OuterIndex": -12,
       "ClassPackage": "/Script/Engine",
       "ClassName": "CapsuleComponent",
@@ -630,10 +628,10 @@
     },
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CollisionCylinder",
-      "OuterIndex": -16,
+      "ObjectName": "CharMoveComp",
+      "OuterIndex": -11,
       "ClassPackage": "/Script/Engine",
-      "ClassName": "CapsuleComponent",
+      "ClassName": "CharacterMovementComponent",
       "PackageName": null,
       "bImportOptional": false
     },
@@ -668,15 +666,6 @@
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "CharMoveComp",
       "OuterIndex": -15,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "CharacterMovementComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CharMoveComp",
-      "OuterIndex": -16,
       "ClassPackage": "/Script/Engine",
       "ClassName": "CharacterMovementComponent",
       "PackageName": null,
@@ -685,7 +674,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Object",
-      "OuterIndex": -42,
+      "OuterIndex": -41,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -694,7 +683,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "BlueprintGeneratedClass",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -703,7 +692,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "InheritableComponentHandler",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -712,7 +701,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SceneComponent",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -721,7 +710,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SCS_Node",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -730,7 +719,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "SimpleConstructionScript",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/CoreUObject",
       "ClassName": "Class",
       "PackageName": null,
@@ -739,7 +728,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__InheritableComponentHandler",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/Engine",
       "ClassName": "InheritableComponentHandler",
       "PackageName": null,
@@ -892,7 +881,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SceneComponent",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SceneComponent",
       "PackageName": null,
@@ -901,7 +890,7 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SCS_Node",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SCS_Node",
       "PackageName": null,
@@ -910,9 +899,18 @@
     {
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "Default__SimpleConstructionScript",
-      "OuterIndex": -43,
+      "OuterIndex": -42,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SimpleConstructionScript",
+      "PackageName": null,
+      "bImportOptional": false
+    },
+    {
+      "$type": "UAssetAPI.Import, UAssetAPI",
+      "ObjectName": "CharacterMesh0",
+      "OuterIndex": -11,
+      "ClassPackage": "/Script/Engine",
+      "ClassName": "SkeletalMeshComponent",
       "PackageName": null,
       "bImportOptional": false
     },
@@ -947,15 +945,6 @@
       "$type": "UAssetAPI.Import, UAssetAPI",
       "ObjectName": "CharacterMesh0",
       "OuterIndex": -15,
-      "ClassPackage": "/Script/Engine",
-      "ClassName": "SkeletalMeshComponent",
-      "PackageName": null,
-      "bImportOptional": false
-    },
-    {
-      "$type": "UAssetAPI.Import, UAssetAPI",
-      "ObjectName": "CharacterMesh0",
-      "OuterIndex": -16,
       "ClassPackage": "/Script/Engine",
       "ClassName": "SkeletalMeshComponent",
       "PackageName": null,
@@ -1040,7 +1029,7 @@
     {
       "$type": "UAssetAPI.FGenerationInfo, UAssetAPI",
       "ExportCount": 7,
-      "NameCount": 61
+      "NameCount": 59
     }
   ],
   "PackageGuid": "{00000000-0000-0000-0000-000000000000}",
@@ -1066,7 +1055,7 @@
   "FolderName": "/Game/Enemies/Hordes/BP_Horde_Cryptic_Wander_Shielders",
   "LocalizationId": null,
   "SoftObjectPathsCount": 0,
-  "SoftObjectPathsOffset": 2302,
+  "SoftObjectPathsOffset": 2256,
   "SearchableNamesOffset": 0,
   "ThumbnailTableOffset": 0,
   "ImportTypeHierarchiesCount": 0,

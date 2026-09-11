@@ -1,2 +1,0 @@
-"C:/Users/joema/Documents/FFWModding/NoFriendlyFire/ModStage/FarFarWest/Content/Player/BP_Player.uasset" "../../../FarFarWest/Content/Player/BP_Player.uasset"
-"C:/Users/joema/Documents/FFWModding/NoFriendlyFire/ModStage/FarFarWest/Content/Player/BP_Player.uexp" "../../../FarFarWest/Content/Player/BP_Player.uexp"

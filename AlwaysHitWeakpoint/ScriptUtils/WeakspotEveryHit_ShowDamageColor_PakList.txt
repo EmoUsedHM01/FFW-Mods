@@ -1,2 +1,0 @@
-"C:/Users/joema/Documents/FFWModding/ModStageShowDamageColor/FarFarWest/Content/Enemies/BP_Enemy.uasset" "../../../FarFarWest/Content/Enemies/BP_Enemy.uasset"
-"C:/Users/joema/Documents/FFWModding/ModStageShowDamageColor/FarFarWest/Content/Enemies/BP_Enemy.uexp" "../../../FarFarWest/Content/Enemies/BP_Enemy.uexp"
